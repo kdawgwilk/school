@@ -1,0 +1,35 @@
+//
+   Created by kwilkinson on 4/27/15.
+
+extends ../layout
+
+block content
+    h1(class='text-center') All Clients
+    table(class='table')
+        tr
+            th First Name
+            th Last Name
+            th Email
+            th Company
+            th Project
+            th Phone
+            th
+            th
+            th
+        - each client, i in clients
+            tr
+                td= client.first_name
+                td= client.last_name
+                td= client.email
+                td= client.company
+                td= client.project
+                td= client.phone
+                td
+                    a(class='btn btn-default btn-xs', href='/clients/#{client._id}') Show
+                td
+                    a(class='btn btn-primary btn-xs', href='/clients/#{client._id}/edit') Edit
+                td
+                    form(action='/clients/#{client._id}', method='post', enctype='application/x-www-form-urlencoded')
+                        input(type='hidden', value='DELETE', name='_method')
+                        button(class='btn btn-danger btn-xs', type='submit') Delete
+    a(class='btn btn-primary btn-lg', href='/clients/new') New Client

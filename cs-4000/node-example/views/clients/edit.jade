@@ -1,0 +1,36 @@
+//
+   Created by kwilkinson on 4/27/15.
+extends ../layout
+
+block content
+    h1(class='text-center') Client Edit
+    form(class='form-horizontal', name='updateclient', method='post', action='/clients/#{client._id}', enctype='application/x-www-form-urlencoded')
+        div(class='form-group')
+            label(for='first_name', class='col-sm-2 control-label') First Name:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='First Name', id='first_name', name='first_name', value='#{client.first_name}')
+        div(class='form-group')
+            label(for='last_name', class='col-sm-2 control-label') Last Name:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='Last Name', id='last_name', name='last_name', value='#{client.last_name}')
+        div(class='form-group')
+            label(for='email', class='col-sm-2 control-label') Email:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='Email', id='email', name='email', value='#{client.email}')
+        div(class='form-group')
+            label(for='company', class='col-sm-2 control-label') Company:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='Company', id='company', name='company', value='#{client.company}')
+        div(class='form-group')
+            label(for='project', class='col-sm-2 control-label') Project:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='Project', id='project', name='project', value='#{client.project}')
+        div(class='form-group')
+            label(for='phone', class='col-sm-2 control-label') Phone:
+            div(class='col-sm-10')
+                input(class='form-control', type='text', placeholder='Phone', id='phone', name='phone', value='#{client.phone}')
+        div(class='form-group')
+            div(class='col-sm-offset-2 col-sm-10')
+                input(type='hidden',value='PUT',name='_method')
+                button(class='btn btn-primary btn-block btn-lg', type='submit') Submit
+                a(class='btn btn-default btn-lg btn-block', href='/clients') Cancel

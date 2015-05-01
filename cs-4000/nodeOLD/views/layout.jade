@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    title= 'CS-4000 NodeJS'
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="description", content="CS-4000")
+    meta(name="author", content="Kaden Wilkinson")
+
+    script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
+    script(type="text/javascript", src="/vendor/angular/angular.min.js")
+    script(type="text/javascript", src="/vendor/bootstrap/dist/js/bootstrap.min.js")
+    script(type="text/javascript", src="/javascripts/main.js")
+
+    link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      nav#navbar-scroll.hidden-xs.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand.logo(href='/') CS-4000
+          #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='/') Home
+              li
+                a(href='/about') About
+              li
+                a(href='/contact') Contact
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Clients
+                  span.caret
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='/clients') All Clients
+                  li
+                    a(href='/clients/new') New Client
+                  li
+                    a(href='#') Something else here
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Users
+                  span.caret
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='/users') All Users
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#') Welcome,
+              li
+                form.navbar-form.navbar-right(role='sign_up')
+                  a(href='/users/new')
+                    button.btn.btn-default(type='button') Sign up
+              li
+                form.navbar-form.navbar-right(role='login')
+                  a(href='/sessions/new')
+                  button.btn.btn-default(type='button')
+    block content
+  footer

@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13AB5C81AA58465001FACF1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB5C71AA58465001FACF1 /* main.cpp */; };
+		A13AB76F1AA58E71001FACF1 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13AB76E1AA58E71001FACF1 /* gtest.framework */; };
+		A13AB7761AA58E99001FACF1 /* exponent_quiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB7701AA58E88001FACF1 /* exponent_quiz.cpp */; };
+		A13AB7771AA58E99001FACF1 /* exponent_quiz.h in Sources */ = {isa = PBXBuildFile; fileRef = A13AB7711AA58E88001FACF1 /* exponent_quiz.h */; };
+		A13AB7781AA58E99001FACF1 /* 1_generate_exponents_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB7731AA58E88001FACF1 /* 1_generate_exponents_tests.cpp */; };
+		A13AB7791AA58E99001FACF1 /* 2_power_2_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB7741AA58E88001FACF1 /* 2_power_2_tests.cpp */; };
+		A13AB77A1AA58E99001FACF1 /* 3_string_to_number_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB7751AA58E88001FACF1 /* 3_string_to_number_tests.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A13AB5C21AA58465001FACF1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A13AB5C41AA58465001FACF1 /* Exponent Quiz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Exponent Quiz"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13AB5C71AA58465001FACF1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A13AB76E1AA58E71001FACF1 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
+		A13AB7701AA58E88001FACF1 /* exponent_quiz.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exponent_quiz.cpp; sourceTree = "<group>"; };
+		A13AB7711AA58E88001FACF1 /* exponent_quiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = exponent_quiz.h; sourceTree = "<group>"; };
+		A13AB7731AA58E88001FACF1 /* 1_generate_exponents_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1_generate_exponents_tests.cpp; sourceTree = "<group>"; };
+		A13AB7741AA58E88001FACF1 /* 2_power_2_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2_power_2_tests.cpp; sourceTree = "<group>"; };
+		A13AB7751AA58E88001FACF1 /* 3_string_to_number_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 3_string_to_number_tests.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A13AB5C11AA58465001FACF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13AB76F1AA58E71001FACF1 /* gtest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A13AB5BB1AA58465001FACF1 = {
+			isa = PBXGroup;
+			children = (
+				A13AB76E1AA58E71001FACF1 /* gtest.framework */,
+				A13AB5C61AA58465001FACF1 /* Exponent Quiz */,
+				A13AB5C51AA58465001FACF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A13AB5C51AA58465001FACF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB5C41AA58465001FACF1 /* Exponent Quiz */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A13AB5C61AA58465001FACF1 /* Exponent Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB5C71AA58465001FACF1 /* main.cpp */,
+				A13AB7701AA58E88001FACF1 /* exponent_quiz.cpp */,
+				A13AB7711AA58E88001FACF1 /* exponent_quiz.h */,
+				A13AB7721AA58E88001FACF1 /* tests */,
+			);
+			path = "Exponent Quiz";
+			sourceTree = "<group>";
+		};
+		A13AB7721AA58E88001FACF1 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB7731AA58E88001FACF1 /* 1_generate_exponents_tests.cpp */,
+				A13AB7741AA58E88001FACF1 /* 2_power_2_tests.cpp */,
+				A13AB7751AA58E88001FACF1 /* 3_string_to_number_tests.cpp */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A13AB5C31AA58465001FACF1 /* Exponent Quiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13AB5CB1AA58465001FACF1 /* Build configuration list for PBXNativeTarget "Exponent Quiz" */;
+			buildPhases = (
+				A13AB5C01AA58465001FACF1 /* Sources */,
+				A13AB5C11AA58465001FACF1 /* Frameworks */,
+				A13AB5C21AA58465001FACF1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Exponent Quiz";
+			productName = "Exponent Quiz";
+			productReference = A13AB5C41AA58465001FACF1 /* Exponent Quiz */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A13AB5BC1AA58465001FACF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Trendly Creations";
+				TargetAttributes = {
+					A13AB5C31AA58465001FACF1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = A13AB5BF1AA58465001FACF1 /* Build configuration list for PBXProject "Exponent Quiz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A13AB5BB1AA58465001FACF1;
+			productRefGroup = A13AB5C51AA58465001FACF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A13AB5C31AA58465001FACF1 /* Exponent Quiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A13AB5C01AA58465001FACF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13AB7761AA58E99001FACF1 /* exponent_quiz.cpp in Sources */,
+				A13AB7771AA58E99001FACF1 /* exponent_quiz.h in Sources */,
+				A13AB7781AA58E99001FACF1 /* 1_generate_exponents_tests.cpp in Sources */,
+				A13AB7791AA58E99001FACF1 /* 2_power_2_tests.cpp in Sources */,
+				A13AB77A1AA58E99001FACF1 /* 3_string_to_number_tests.cpp in Sources */,
+				A13AB5C81AA58465001FACF1 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A13AB5C91AA58465001FACF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A13AB5CA1AA58465001FACF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A13AB5CC1AA58465001FACF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Sources/school/cs-3005",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A13AB5CD1AA58465001FACF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Sources/school/cs-3005",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A13AB5BF1AA58465001FACF1 /* Build configuration list for PBXProject "Exponent Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13AB5C91AA58465001FACF1 /* Debug */,
+				A13AB5CA1AA58465001FACF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A13AB5CB1AA58465001FACF1 /* Build configuration list for PBXNativeTarget "Exponent Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13AB5CC1AA58465001FACF1 /* Debug */,
+				A13AB5CD1AA58465001FACF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A13AB5BC1AA58465001FACF1 /* Project object */;
+}

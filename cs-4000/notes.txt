@@ -1,0 +1,63 @@
+kwilkinson@dysprosium:~$ ssh saturn
+kwilkinson@saturn's password: 
+
+kwilkinson@saturn:~$ dsc_mysql_adduser.pl 
+[sudo] password for kwilkinson: 
+        MySQL Password: 
+Confirm MySQL Password: 
+
+kwilkinson@saturn:~$ mysql -h mysql -p
+Enter password: 
+
+mysql> use kwilkinson
+Database changed
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE students (
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> name VARCHAR(255) NOT NULL,
+    -> email VARCHAR(255),
+    -> birthdate DATE,
+    -> age INT);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> EXPLAIN students
+    -> ;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | YES  |     | NULL    |                |
+| birthdate | date         | YES  |     | NULL    |                |
+| age       | int(11)      | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO students (name, email, birthdate, age) VALUES ('Kaden', 'kaden@test.com', '1992-06-13', 27);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO students (name, email, birthdate, age) VALUES ('DJ', 'dj@test.com', '1987-08-07', 27);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM students;
++----+-------+----------------+------------+------+
+| id | name  | email          | birthdate  | age  |
++----+-------+----------------+------------+------+
+|  1 | Kaden | kaden@test.com | 1992-06-13 |   27 |
+|  2 | DJ    | dj@test.com    | 1987-08-07 |   27 |
++----+-------+----------------+------------+------+
+2 rows in set (0.01 sec)
+
+
+
+SHOW TABLES;
+CREATE TABLE <tablename> (...);
+EXPLAIN <tablename>;
+INSERT INTO <tablename> (...) VALUES (...);
+SELECT * FROM <tablename>;
+
+
+mysql -h trendlycreations.cpqwlpe3owti.us-west-2.rds.amazonaws.com -u kdawgwilk -p trendly

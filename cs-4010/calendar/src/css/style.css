@@ -1,0 +1,52 @@
+#calendar td, th {
+    /*border: solid #000000 1px;*/
+    text-align: right;
+}
+#calendar td:nth-child(1), td:nth-child(7) {
+    background-color: #efefef;
+}
+#calendar th:nth-child(1), th:nth-child(7) {
+    color: #bbbbbb;
+}
+#calendar td {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+}
+#calendar td .add {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    display: none;
+}
+#calendar td:hover .add {
+    display: block;
+}
+.header {
+    height: 60px;
+}
+.list-view {
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    left: 45%;
+}
+.month {
+    position: absolute;
+    left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.navigation {
+    /*position: relative;*/
+    /*width: 190px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    padding-top: 20px;
+    position: absolute;
+    right: 30px;
+}
+/*.year {*/
+    /*position: absolute;*/
+    /*right: 0;*/
+/*}*/

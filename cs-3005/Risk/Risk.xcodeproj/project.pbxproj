@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13AB5451AA57E9E001FACF1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB5441AA57E9E001FACF1 /* main.cpp */; };
+		A13AB6C41AA58967001FACF1 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13AB6C31AA58967001FACF1 /* gtest.framework */; };
+		A13AB6C51AA5896E001FACF1 /* risk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6BB1AA58958001FACF1 /* risk.cpp */; };
+		A13AB6C61AA5896E001FACF1 /* risk.h in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6BC1AA58958001FACF1 /* risk.h */; };
+		A13AB6C71AA5896E001FACF1 /* 1_roll_die_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6BE1AA58958001FACF1 /* 1_roll_die_tests.cpp */; };
+		A13AB6C81AA5896E001FACF1 /* 2_sort_int_dsc_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6BF1AA58958001FACF1 /* 2_sort_int_dsc_tests.cpp */; };
+		A13AB6C91AA5896E001FACF1 /* 3_roll_player_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6C01AA58958001FACF1 /* 3_roll_player_tests.cpp */; };
+		A13AB6CA1AA5896E001FACF1 /* 4_handle_battle_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6C11AA58958001FACF1 /* 4_handle_battle_tests.cpp */; };
+		A13AB6CB1AA5896E001FACF1 /* 5_win_chances_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13AB6C21AA58958001FACF1 /* 5_win_chances_tests.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A13AB53F1AA57E9E001FACF1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A13AB5411AA57E9E001FACF1 /* Risk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Risk; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13AB5441AA57E9E001FACF1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A13AB6BB1AA58958001FACF1 /* risk.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = risk.cpp; sourceTree = "<group>"; };
+		A13AB6BC1AA58958001FACF1 /* risk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risk.h; sourceTree = "<group>"; };
+		A13AB6BE1AA58958001FACF1 /* 1_roll_die_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1_roll_die_tests.cpp; sourceTree = "<group>"; };
+		A13AB6BF1AA58958001FACF1 /* 2_sort_int_dsc_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2_sort_int_dsc_tests.cpp; sourceTree = "<group>"; };
+		A13AB6C01AA58958001FACF1 /* 3_roll_player_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 3_roll_player_tests.cpp; sourceTree = "<group>"; };
+		A13AB6C11AA58958001FACF1 /* 4_handle_battle_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 4_handle_battle_tests.cpp; sourceTree = "<group>"; };
+		A13AB6C21AA58958001FACF1 /* 5_win_chances_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 5_win_chances_tests.cpp; sourceTree = "<group>"; };
+		A13AB6C31AA58967001FACF1 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A13AB53E1AA57E9E001FACF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13AB6C41AA58967001FACF1 /* gtest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A13AB5381AA57E9E001FACF1 = {
+			isa = PBXGroup;
+			children = (
+				A13AB6C31AA58967001FACF1 /* gtest.framework */,
+				A13AB5431AA57E9E001FACF1 /* Risk */,
+				A13AB5421AA57E9E001FACF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A13AB5421AA57E9E001FACF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB5411AA57E9E001FACF1 /* Risk */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A13AB5431AA57E9E001FACF1 /* Risk */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB5441AA57E9E001FACF1 /* main.cpp */,
+				A13AB6BB1AA58958001FACF1 /* risk.cpp */,
+				A13AB6BC1AA58958001FACF1 /* risk.h */,
+				A13AB6BD1AA58958001FACF1 /* tests */,
+			);
+			path = Risk;
+			sourceTree = "<group>";
+		};
+		A13AB6BD1AA58958001FACF1 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				A13AB6BE1AA58958001FACF1 /* 1_roll_die_tests.cpp */,
+				A13AB6BF1AA58958001FACF1 /* 2_sort_int_dsc_tests.cpp */,
+				A13AB6C01AA58958001FACF1 /* 3_roll_player_tests.cpp */,
+				A13AB6C11AA58958001FACF1 /* 4_handle_battle_tests.cpp */,
+				A13AB6C21AA58958001FACF1 /* 5_win_chances_tests.cpp */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A13AB5401AA57E9E001FACF1 /* Risk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13AB5481AA57E9E001FACF1 /* Build configuration list for PBXNativeTarget "Risk" */;
+			buildPhases = (
+				A13AB53D1AA57E9E001FACF1 /* Sources */,
+				A13AB53E1AA57E9E001FACF1 /* Frameworks */,
+				A13AB53F1AA57E9E001FACF1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Risk;
+			productName = Risk;
+			productReference = A13AB5411AA57E9E001FACF1 /* Risk */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A13AB5391AA57E9E001FACF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Trendly Creations";
+				TargetAttributes = {
+					A13AB5401AA57E9E001FACF1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = A13AB53C1AA57E9E001FACF1 /* Build configuration list for PBXProject "Risk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A13AB5381AA57E9E001FACF1;
+			productRefGroup = A13AB5421AA57E9E001FACF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A13AB5401AA57E9E001FACF1 /* Risk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A13AB53D1AA57E9E001FACF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13AB6C51AA5896E001FACF1 /* risk.cpp in Sources */,
+				A13AB6C61AA5896E001FACF1 /* risk.h in Sources */,
+				A13AB6C71AA5896E001FACF1 /* 1_roll_die_tests.cpp in Sources */,
+				A13AB6C81AA5896E001FACF1 /* 2_sort_int_dsc_tests.cpp in Sources */,
+				A13AB6C91AA5896E001FACF1 /* 3_roll_player_tests.cpp in Sources */,
+				A13AB6CA1AA5896E001FACF1 /* 4_handle_battle_tests.cpp in Sources */,
+				A13AB6CB1AA5896E001FACF1 /* 5_win_chances_tests.cpp in Sources */,
+				A13AB5451AA57E9E001FACF1 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A13AB5461AA57E9E001FACF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A13AB5471AA57E9E001FACF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A13AB5491AA57E9E001FACF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Sources/school/cs-3005",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A13AB54A1AA57E9E001FACF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Sources/school/cs-3005",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A13AB53C1AA57E9E001FACF1 /* Build configuration list for PBXProject "Risk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13AB5461AA57E9E001FACF1 /* Debug */,
+				A13AB5471AA57E9E001FACF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A13AB5481AA57E9E001FACF1 /* Build configuration list for PBXNativeTarget "Risk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13AB5491AA57E9E001FACF1 /* Debug */,
+				A13AB54A1AA57E9E001FACF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A13AB5391AA57E9E001FACF1 /* Project object */;
+}

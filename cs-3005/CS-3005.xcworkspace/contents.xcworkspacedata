@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Array Functions/Array Functions.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Risk/Risk.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Exponent Quiz/Exponent Quiz.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Student Class Part 1/Student Class Part 1.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Student Class Part 2/Student Class Part 2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Student Linked List/Student Linked List.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Linked List Template/Linked List Template.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Illustrator/Illustrator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Ultimate Tic-Tac-Toe/Ultimate Tic-Tac-Toe.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Babbler/Babbler.xcodeproj">
+   </FileRef>
+</Workspace>

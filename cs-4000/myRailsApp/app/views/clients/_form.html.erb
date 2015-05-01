@@ -1,0 +1,66 @@
+<%= form_for @client, :html => { :class => "form-horizontal client" } do |f| %>
+
+    <% if @client.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @client.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :first_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :first_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:first_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :last_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :last_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:last_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:email]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :company, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :company, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:company]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :project, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :project, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:project]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :phone, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :phone, :class => 'form-control' %>
+    </div>
+    <%= error_span(@client[:phone]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            clients_path, :class => 'btn btn-default' %>
+
+<% end %>

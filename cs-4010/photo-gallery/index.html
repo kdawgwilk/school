@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/stapel.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <script type="text/javascript" src="src/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="src/js/modernizr.custom.63321.js"></script>
+    <script type="text/javascript" src="src/js/jquery.stapel.js"></script>
+    <script type="text/javascript" src="src/js/piclist.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <span id="close" class="back">&larr;</span>
+            <h2>Photo Gallery</h2><a><i class="play fa fa-play-circle fa-5x"></i></a><h3 id="name"></h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 col-sm-offset-2">
+                <a href="#" id="back"><i class="fa fa-arrow-circle-left fa-5x"></i></a>
+            </div>
+            <div class="col-sm-6 preview">
+                <img id="preview" class="img-responsive" name="preview" src="http://russ.php.cs.dixie.edu/gardens/medium/viva01.jpg" category="0" image="0" alt="No Image Loaded"/>
+            </div>
+            <div class="col-sm-1">>
+                <a href="#" id="next"><i class="fa fa-arrow-circle-right fa-5x"></i></a>
+
+            </div>
+        </div>
+        <div class="row thumbs">
+            <ul id="tp-grid" class="tp-grid"></ul>
+        </div>
+    </div>
+</body>
+</html>
