@@ -19,6 +19,7 @@ public:
     Button(Point p1, const char *label, int id, std::vector<double> color);
     
     virtual void draw();
+    virtual void setColor(std::vector<double> color);
 
     bool contains(Point p);
     void setActive(bool state);

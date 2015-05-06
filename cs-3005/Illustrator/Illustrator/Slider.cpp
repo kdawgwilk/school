@@ -16,10 +16,10 @@ Slider::Slider(Point p1, const char *label, int id, double value, std::vector<do
     
 }
 
-void Slider::setColor(std::vector<double> color)
-{
-    mColor = color;
-}
+//void Slider::setColor(std::vector<double> color)
+//{
+//    mColor = color;
+//}
 
 void Slider::setValue(double value)
 {
@@ -36,9 +36,10 @@ double Slider::getValue()
     return mValue;
 }
 
-void Slider::draw()
+void Slider::draw(std::vector<double> color)
 {
-    glColor3d(mColor[0], mColor[1], mColor[2]);
+    // Slider
+    glColor3d(color[0], color[1], color[2]);
     glBegin(GL_QUADS);
     glVertex2d(mP1.getX(), mP1.getY());
     glVertex2d(mP2.getX(), mP1.getY());
@@ -46,15 +47,17 @@ void Slider::draw()
     glVertex2d(mP1.getX(), mP2.getY());
     glEnd();
     
-    glColor3d(255 - mColor[0], 255 - mColor[1], 255 - mColor[2]);
+    // Slider Position
+    glColor3d(1 - color[0], 1 - color[1], 1 - color[2]);
     glBegin(GL_QUADS);
-    double value = mP1.getX() + ((100 * mValue) / 255) - 5;
+    double value = mP1.getX() + (100 * mValue) - 5;
     glVertex2d(value, mP1.getY() - 3);
     glVertex2d(value + 10, mP1.getY() - 3);
     glVertex2d(value + 10, mP2.getY() + 3);
     glVertex2d(value, mP2.getY() + 3);
     glEnd();
     
+    // Slider Label
     void *font = GLUT_BITMAP_9_BY_15;
     
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -80,7 +83,7 @@ bool Slider::contains(Point p)
         // Distance from left edge of slider
         double d = p.getX() - mP1.getX();
 //        std::cout << "Distance: " << d <<std::endl;
-        mValue = ((d * 255) / 100);
+        mValue = d / 100;
         return true;
     }
     return false;

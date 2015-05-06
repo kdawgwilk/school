@@ -23,7 +23,7 @@ std::vector<Shape*> SHAPES;
 std::vector<Shape*> UNDO_SHAPES;
 std::vector<Button*> BUTTONS;
 std::vector<Slider*> SLIDERS;
-std::vector<double> COLOR = {255, 0, 0};
+std::vector<double> COLOR = {1, 0, 0};
 const std::string FILENAME = "file.txt";
 
 
@@ -124,7 +124,7 @@ void drawButtons()
 void drawSliders()
 {
     for (auto itr : SLIDERS) {
-        itr->draw();
+        itr->draw(COLOR);
     }
 }
 
@@ -147,7 +147,7 @@ void createSliders()
 {
     SLIDERS.push_back(new Slider(Point(10, 160), "Blue", 6, 0, COLOR));
     SLIDERS.push_back(new Slider(Point(10, 190), "Green", 7, 0, COLOR));
-    SLIDERS.push_back(new Slider(Point(10, 220), "Red", 8, 255, COLOR));
+    SLIDERS.push_back(new Slider(Point(10, 220), "Red", 8, 1, COLOR));
 }
 
 // Outputs a string of text at the specified location.
@@ -182,7 +182,6 @@ void handleButtonClick(int x, int y, Button *btn)
             itr->setActive(false);
         }
         btn->setActive(true);
-//        std::cout << "Mode set to " << MODE << std::endl;
     }
     if (btn->getID() == 9) {
         redo();
@@ -196,7 +195,6 @@ void handleButtonClick(int x, int y, Button *btn)
     if (btn->getID() == 12) {
         save();
     }
-//    std::cout << "Button " << btn->getID() << " Clicked" << std::endl;
 }
 
 void handleSliderClick(int x, int y, Slider *slider)
@@ -213,15 +211,6 @@ void handleSliderClick(int x, int y, Slider *slider)
     for (auto itr : SLIDERS) {
         itr->setColor(COLOR);
     }
-    std::cout << "New Color Value: (";
-
-    for (auto itr : COLOR) {
-        std::cout << itr << ", " ;
-
-    }
-    std::cout << ")" << std::endl;
-
-//    std::cout << "Slider " << slider->getID() << " Clicked" << std::endl;
 }
 
 void handleOtherClick(int x, int y)

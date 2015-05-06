@@ -50,7 +50,7 @@ void Rectangle::setColor(std::vector<double> color)
 
 void Rectangle::save(std::ostream &os)
 {
-    os << "Rectangle " << mP1 << mP2 << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+    os << "Rectangle " << mP1 << mP2 << mColor[0] << " " << mColor[1] << " " << mColor[3] << std::endl;
 }
 
 void Rectangle::load(std::istream &is)

@@ -48,6 +48,11 @@ void Button::draw()
     glDisable(GL_BLEND);
 }
 
+void Button::setColor(std::vector<double> color)
+{
+    mColor = color;
+}
+
 bool Button::contains(Point p)
 {
     if(p.getX() > mP1.getX() && p.getX() < mP2.getX() && p.getY() > mP1.getY() && p.getY() < mP2.getY()) {

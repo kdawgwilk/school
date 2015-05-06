@@ -18,9 +18,11 @@ class Slider: public Button {
 public:
     Slider(Point p1, const char *label, int id, double value, std::vector<double> color);
     
-    void setColor(std::vector<double> color);
+//    void setColor(std::vector<double> color);
     void setValue(double value);
-    virtual void draw();
+//    virtual void draw();
+    void draw(std::vector<double> color);
+
     bool contains(Point p);
     
     int getID();

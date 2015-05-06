@@ -64,7 +64,7 @@ void Circle::setColor(std::vector<double> color)
 
 void Circle::save(std::ostream &os)
 {
-    os << "Circle " << mCenter << int(mRadius) << " " << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+    os << "Circle " << mCenter << mRadius << " " << mColor[0] << " " << mColor[1] << " " << mColor[3] << std::endl;
 }
 
 void Circle::load(std::istream &is)

@@ -55,7 +55,7 @@ void Triangle::setColor(std::vector<double> color)
 
 void Triangle::save(std::ostream &os)
 {
-    os << "Triangle " << mP1 << mP2 << mP3 << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+    os << "Triangle " << mP1 << mP2 << mP3 << mColor[0] << " " << mColor[1] << " " << mColor[3] << std::endl;
 }
 
 void Triangle::load(std::istream &is)
