@@ -34,39 +34,8 @@
 
 /* Begin PBXFileReference section */
 		A145DE511AF9D43500985404 /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = file.txt; path = Illustrator/file.txt; sourceTree = "<group>"; };
-		A14888AC1AF95D7E00FC1778 /* button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = button.cpp; sourceTree = "<group>"; };
-		A14888AD1AF95D7E00FC1778 /* button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
-		A14888AE1AF95D7E00FC1778 /* circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
-		A14888AF1AF95D7E00FC1778 /* circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circle.h; sourceTree = "<group>"; };
-		A14888B11AF95D7E00FC1778 /* graphics1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graphics1.cpp; sourceTree = "<group>"; };
-		A14888B31AF95D7E00FC1778 /* out.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = out.txt; sourceTree = "<group>"; };
-		A14888B41AF95D7E00FC1778 /* rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rectangle.cpp; sourceTree = "<group>"; };
-		A14888B51AF95D7E00FC1778 /* rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rectangle.h; sourceTree = "<group>"; };
-		A14888B61AF95D7E00FC1778 /* shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shape.cpp; sourceTree = "<group>"; };
-		A14888B71AF95D7E00FC1778 /* shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shape.h; sourceTree = "<group>"; };
-		A14888B81AF95D7E00FC1778 /* shapes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shapes.cpp; sourceTree = "<group>"; };
-		A14888B91AF95D7E00FC1778 /* shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shapes.h; sourceTree = "<group>"; };
-		A14888BC1AF95D7E00FC1778 /* triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
-		A14888BD1AF95D7E00FC1778 /* triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
 		A1A086F91ADB5968005C66D5 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
-		A1A086FC1ADB59D6005C66D5 /* PointTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointTest.cpp; path = Illustrator/PointTest.cpp; sourceTree = "<group>"; };
-		A1A087001ADB5F82005C66D5 /* RectangleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RectangleTest.cpp; path = Illustrator/RectangleTest.cpp; sourceTree = "<group>"; };
-		A1A087021ADB5F9E005C66D5 /* CircleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircleTest.cpp; path = Illustrator/CircleTest.cpp; sourceTree = "<group>"; };
-		A1A087041ADB5FB5005C66D5 /* ShapeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShapeTest.cpp; path = Illustrator/ShapeTest.cpp; sourceTree = "<group>"; };
-		A1A087061ADB5FC7005C66D5 /* TriangleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TriangleTest.cpp; path = Illustrator/TriangleTest.cpp; sourceTree = "<group>"; };
-		A1A087081ADB5FDC005C66D5 /* ButtonTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ButtonTest.cpp; path = Illustrator/ButtonTest.cpp; sourceTree = "<group>"; };
-		A1A0870A1ADB5FF3005C66D5 /* SliderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SliderTest.cpp; path = Illustrator/SliderTest.cpp; sourceTree = "<group>"; };
 		A1DC86121AD464270071AEF8 /* Illustrator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Illustrator; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DC864E1AD464C70071AEF8 /* button.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = button.py; sourceTree = "<group>"; };
-		A1DC864F1AD464C70071AEF8 /* circle.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = circle.py; sourceTree = "<group>"; };
-		A1DC86501AD464C70071AEF8 /* config.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = config.py; sourceTree = "<group>"; };
-		A1DC86511AD464C70071AEF8 /* game.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = game.py; sourceTree = "<group>"; };
-		A1DC86521AD464C70071AEF8 /* illustrator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = illustrator.py; sourceTree = "<group>"; };
-		A1DC86531AD464C70071AEF8 /* point.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = point.py; sourceTree = "<group>"; };
-		A1DC86541AD464C70071AEF8 /* rectangle.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rectangle.py; sourceTree = "<group>"; };
-		A1DC86551AD464C70071AEF8 /* slider-gimme.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "slider-gimme.py"; sourceTree = "<group>"; };
-		A1DC86561AD464C70071AEF8 /* slider.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = slider.py; sourceTree = "<group>"; };
-		A1DC86571AD464C70071AEF8 /* triangle.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = triangle.py; sourceTree = "<group>"; };
 		A1DC86581AD464C70071AEF8 /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Point.cpp; path = Illustrator/Point.cpp; sourceTree = "<group>"; };
 		A1DC86591AD464C70071AEF8 /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Point.h; path = Illustrator/Point.h; sourceTree = "<group>"; };
 		A1DC865A1AD464C70071AEF8 /* Slider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Slider.cpp; path = Illustrator/Slider.cpp; sourceTree = "<group>"; };
@@ -101,60 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A14888AB1AF95D7E00FC1778 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				A14888B11AF95D7E00FC1778 /* graphics1.cpp */,
-				A14888B61AF95D7E00FC1778 /* shape.cpp */,
-				A14888B71AF95D7E00FC1778 /* shape.h */,
-				A14888B81AF95D7E00FC1778 /* shapes.cpp */,
-				A14888B91AF95D7E00FC1778 /* shapes.h */,
-				A14888AE1AF95D7E00FC1778 /* circle.cpp */,
-				A14888AF1AF95D7E00FC1778 /* circle.h */,
-				A14888B41AF95D7E00FC1778 /* rectangle.cpp */,
-				A14888B51AF95D7E00FC1778 /* rectangle.h */,
-				A14888BC1AF95D7E00FC1778 /* triangle.cpp */,
-				A14888BD1AF95D7E00FC1778 /* triangle.h */,
-				A14888AC1AF95D7E00FC1778 /* button.cpp */,
-				A14888AD1AF95D7E00FC1778 /* button.h */,
-				A14888B31AF95D7E00FC1778 /* out.txt */,
-			);
-			name = example;
-			path = Illustrator/example;
-			sourceTree = "<group>";
-		};
-		A1A086FB1ADB597B005C66D5 /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				A1A086FC1ADB59D6005C66D5 /* PointTest.cpp */,
-				A1A087001ADB5F82005C66D5 /* RectangleTest.cpp */,
-				A1A087021ADB5F9E005C66D5 /* CircleTest.cpp */,
-				A1A087041ADB5FB5005C66D5 /* ShapeTest.cpp */,
-				A1A087061ADB5FC7005C66D5 /* TriangleTest.cpp */,
-				A1A087081ADB5FDC005C66D5 /* ButtonTest.cpp */,
-				A1A0870A1ADB5FF3005C66D5 /* SliderTest.cpp */,
-			);
-			name = tests;
-			sourceTree = "<group>";
-		};
-		A1DC864D1AD464C70071AEF8 /* Illustrator */ = {
-			isa = PBXGroup;
-			children = (
-				A1DC864E1AD464C70071AEF8 /* button.py */,
-				A1DC864F1AD464C70071AEF8 /* circle.py */,
-				A1DC86501AD464C70071AEF8 /* config.py */,
-				A1DC86511AD464C70071AEF8 /* game.py */,
-				A1DC86521AD464C70071AEF8 /* illustrator.py */,
-				A1DC86531AD464C70071AEF8 /* point.py */,
-				A1DC86541AD464C70071AEF8 /* rectangle.py */,
-				A1DC86551AD464C70071AEF8 /* slider-gimme.py */,
-				A1DC86561AD464C70071AEF8 /* slider.py */,
-				A1DC86571AD464C70071AEF8 /* triangle.py */,
-			);
-			name = Illustrator;
-			path = Illustrator/Illustrator;
-			sourceTree = "<group>";
-		};
 		D355F37714BF71440064E474 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,9 +100,6 @@
 				A1DC865A1AD464C70071AEF8 /* Slider.cpp */,
 				A1DC865B1AD464C70071AEF8 /* Slider.h */,
 				A145DE511AF9D43500985404 /* file.txt */,
-				A1A086FB1ADB597B005C66D5 /* tests */,
-				A1DC864D1AD464C70071AEF8 /* Illustrator */,
-				A14888AB1AF95D7E00FC1778 /* example */,
 				D355F37714BF71440064E474 /* Frameworks */,
 				D3EA611B14BF56F5003EF908 /* Products */,
 			);

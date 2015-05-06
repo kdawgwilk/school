@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A11B18241AF57664003B70DF /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B18221AF57664003B70DF /* Board.cpp */; };
+		A145DE541AFA05A500985404 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE521AFA05A500985404 /* Grid.cpp */; };
+		A145DE571AFA076900985404 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE551AFA076900985404 /* Square.cpp */; };
+		A145DE5A1AFA07CD00985404 /* Symbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE581AFA07CD00985404 /* Symbol.cpp */; };
 		A1DC86831AD465D20071AEF8 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612714BF5760003EF908 /* GLUT.framework */; };
 		A1DC86841AD465D80071AEF8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612814BF5760003EF908 /* OpenGL.framework */; };
-		A1DC86871AD466320071AEF8 /* graphics1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86851AD466320071AEF8 /* graphics1.cpp */; };
-		A1DC86881AD466490071AEF8 /* graphics1.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86861AD466320071AEF8 /* graphics1.h */; };
+		A1DC86871AD466320071AEF8 /* OpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86851AD466320071AEF8 /* OpenGL.cpp */; };
+		A1DC86881AD466490071AEF8 /* OpenGL.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86861AD466320071AEF8 /* OpenGL.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,9 +32,15 @@
 /* Begin PBXFileReference section */
 		A11B18221AF57664003B70DF /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		A11B18231AF57664003B70DF /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		A145DE521AFA05A500985404 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		A145DE531AFA05A500985404 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		A145DE551AFA076900985404 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
+		A145DE561AFA076900985404 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		A145DE581AFA07CD00985404 /* Symbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Symbol.cpp; sourceTree = "<group>"; };
+		A145DE591AFA07CD00985404 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
 		A1DC867C1AD465B90071AEF8 /* Ultimate Tic-Tac-Toe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ultimate Tic-Tac-Toe"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DC86851AD466320071AEF8 /* graphics1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics1.cpp; sourceTree = "<group>"; };
-		A1DC86861AD466320071AEF8 /* graphics1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics1.h; sourceTree = "<group>"; };
+		A1DC86851AD466320071AEF8 /* OpenGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGL.cpp; sourceTree = "<group>"; };
+		A1DC86861AD466320071AEF8 /* OpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGL.h; sourceTree = "<group>"; };
 		D3EA612714BF5760003EF908 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		D3EA612814BF5760003EF908 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -52,10 +61,16 @@
 		A1DC867D1AD465BA0071AEF8 /* Ultimate Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
-				A1DC86851AD466320071AEF8 /* graphics1.cpp */,
-				A1DC86861AD466320071AEF8 /* graphics1.h */,
+				A1DC86851AD466320071AEF8 /* OpenGL.cpp */,
+				A1DC86861AD466320071AEF8 /* OpenGL.h */,
 				A11B18221AF57664003B70DF /* Board.cpp */,
 				A11B18231AF57664003B70DF /* Board.h */,
+				A145DE521AFA05A500985404 /* Grid.cpp */,
+				A145DE531AFA05A500985404 /* Grid.h */,
+				A145DE551AFA076900985404 /* Square.cpp */,
+				A145DE561AFA076900985404 /* Square.h */,
+				A145DE581AFA07CD00985404 /* Symbol.cpp */,
+				A145DE591AFA07CD00985404 /* Symbol.h */,
 			);
 			path = "Ultimate Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -141,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A145DE571AFA076900985404 /* Square.cpp in Sources */,
 				A11B18241AF57664003B70DF /* Board.cpp in Sources */,
-				A1DC86881AD466490071AEF8 /* graphics1.h in Sources */,
-				A1DC86871AD466320071AEF8 /* graphics1.cpp in Sources */,
+				A1DC86881AD466490071AEF8 /* OpenGL.h in Sources */,
+				A1DC86871AD466320071AEF8 /* OpenGL.cpp in Sources */,
+				A145DE541AFA05A500985404 /* Grid.cpp in Sources */,
+				A145DE5A1AFA07CD00985404 /* Symbol.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
