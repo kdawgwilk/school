@@ -20,9 +20,8 @@ public:
     
     void setColor(std::vector<double> color);
     void setValue(double value);
-    std::vector<double> getOppositeColor();
-//    virtual void draw();
-//    bool contains(Point p);
+    virtual void draw();
+    bool contains(Point p);
     
     int getID();
     double getValue();

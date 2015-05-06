@@ -9,6 +9,11 @@
 #include "Circle.h"
 
 
+Circle::Circle()
+{
+    
+}
+
 Circle::Circle(Point center, double radius, std::vector<double> colors)
 :   Shape(colors),
     mCenter(center),
@@ -25,7 +30,6 @@ Circle::Circle(Point center, Point p, std::vector<double> colors)
         pow((p.getX() - center.getX()), 2.0) +
         pow((p.getY() - center.getY()), 2.0)
     );
-    std::cout << distance << std::endl;
     mRadius = distance;
 }
 
@@ -53,9 +57,29 @@ void Circle::draw()
     glEnd();
 }
 
-void Circle::save(std::ostream &os) const
+void Circle::setColor(std::vector<double> color)
 {
-    os << "";
+    mColor = color;
+}
+
+void Circle::save(std::ostream &os)
+{
+    os << "Circle " << mCenter << int(mRadius) << " " << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+}
+
+void Circle::load(std::istream &is)
+{
+    Point center;
+    double radius;
+    std::vector<double> color;
+    double r, g, b;
+    is >> center >> radius >> r >> g >> b;
+    color.push_back(r);
+    color.push_back(g);
+    color.push_back(b);
+    setCenter(center);
+    setRadius(radius);
+    setColor(color);
 }
 
 Point Circle::getCenter()

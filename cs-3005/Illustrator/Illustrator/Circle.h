@@ -17,6 +17,7 @@
 class Circle: public Shape {
 public:
     
+    Circle();
     Circle(Point center, double radius, std::vector<double> colors);
     Circle(Point center, Point p, std::vector<double> colors);
     
@@ -24,7 +25,9 @@ public:
     void setRadius(double r);
     
     virtual void draw();
-    virtual void save(std::ostream &os) const;
+    virtual void setColor(std::vector<double> color);
+    virtual void save(std::ostream &os);
+    virtual void load(std::istream &is);
     
     Point getCenter();
     double getRadius();

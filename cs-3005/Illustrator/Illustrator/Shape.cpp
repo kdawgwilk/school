@@ -9,6 +9,11 @@
 #include "Shape.h"
 
 
+Shape::Shape()
+{
+    
+}
+
 Shape::Shape(std::vector<double> color)
 :   mColor(color)
 {

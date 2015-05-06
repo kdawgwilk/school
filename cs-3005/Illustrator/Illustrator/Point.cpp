@@ -8,6 +8,12 @@
 
 #include "Point.h"
 
+
+Point::Point()
+{
+    
+}
+
 Point::Point(double x, double y)
 :   Shape(std::vector<double>{255, 255, 255}),
     mX(x),
@@ -40,17 +46,42 @@ void Point::draw()
     glEnd();
 }
 
-void Point::save(std::ostream &os) const
+void Point::setColor(std::vector<double> color)
 {
-    os << "";
+    mColor = color;
 }
 
-double Point::getX()
+void Point::save(std::ostream &os)
+{
+
+}
+
+void Point::load(std::istream &is)
+{
+    
+}
+
+std::ostream &operator<<(std::ostream &os, const Point &rhs)
+{
+    os << rhs.getX() << " " << rhs.getY() << " ";
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Point &rhs)
+{
+    double x, y;
+    is >> x >> y;
+    rhs.setX(x);
+    rhs.setY(y);
+    return is;
+}
+
+double Point::getX() const
 {
     return mX;
 }
 
-double Point::getY()
+double Point::getY() const
 {
     return mY;
 }

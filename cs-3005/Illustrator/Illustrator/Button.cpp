@@ -48,11 +48,6 @@ void Button::draw()
     glDisable(GL_BLEND);
 }
 
-void Button::save(std::ostream &os) const
-{
-    os << "";
-}
-
 bool Button::contains(Point p)
 {
     if(p.getX() > mP1.getX() && p.getX() < mP2.getX() && p.getY() > mP1.getY() && p.getY() < mP2.getY()) {

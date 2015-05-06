@@ -20,106 +20,83 @@ double SCREEN_X = 700;
 double SCREEN_Y = 500;
 std::vector<Point> POINTS;
 std::vector<Shape*> SHAPES;
-std::vector<Shape> UNDO_SHAPES;
+std::vector<Shape*> UNDO_SHAPES;
 std::vector<Button*> BUTTONS;
 std::vector<Slider*> SLIDERS;
-std::vector<double> COLOR = {1, 0, 0};
+std::vector<double> COLOR = {255, 0, 0};
 const std::string FILENAME = "file.txt";
 
 
 void save()
 {
-//    unsigned int j;
-//    int i;
-//    std::ofstream fout(FILENAME);
-//    if(!fout)
-//    {
-//        std::cerr << "Unable to open " << FILENAME << std::endl;
-//        return;
-//    }
-//    for( i = 0; i < SHAPES.size(); i++)
-//    {
-//        SHAPES[i]->save();
-//        if(strcnp(typeid(SHAPES[i]).name(), "T") == 0)
-//        {
-//            fout << "Triangle";
-//            fout << "\n";
-//            for(j=0; j<SHAPES[i]->points.size(); j++)
-//            {
-//                fout << SHAPES[i]->points[j] << " ";
-//            }
-//            fout << "\n";
-//            for(j=0; j<SHAPES[i]->colors.size(); j++)
-//            {
-//                fout << SHAPES[i]->colors[j] << " ";
-//            }
-//            fout << "\n";
-//        }
-//    }
+    int i;
+    std::ofstream fout(FILENAME);
+    if(!fout)
+    {
+        std::cerr << "Unable to open " << FILENAME << std::endl;
+        return;
+    }
+    for(i = 0; i < SHAPES.size(); i++)
+    {
+        SHAPES[i]->save(fout);
+    }
+    fout.close();
 }
 
 void load()
 {
     clear();
-    
-//    std::string shape_type;
-//    double x1, y1, x2, y2, x3, y3;
-//    double r, g, b;
-//    std::vector<double> colors_in (3);
-//    
-//    std::ifstream fin(FILENAME);
-//    if(!fin)
-//    {
-//        std::cerr << "Unable to open " << FILENAME << std::endl;
-//        return;
-//    }
-//    while(! fin.eof())
-//    {
-//        fin >> shape_type >> std::ws;
-//        if (shape_type == "Triangle")	{
-//            fin>>x1>>y1>>x2>>y2>>x3>>y3>>std::ws;
-//            fin >> r >> g >> b >> std::ws;
-//            
-//            colors_in[0] = r;
-//            colors_in[1] = g;
-//            colors_in[2] = b;
-//            SHAPES.push_back(new Triangle(x1, y1, x2, y2, x3, y3, colors_in));
-//        }
-//        else if (shape_type == "Rectangle")	{
-//            fin>>x1>>y1>>x2>>y2>>std::ws;
-//            fin >> r >> g >> b >> std::ws;
-//            
-//            colors_in[0] = r;
-//            colors_in[1] = g;
-//            colors_in[2] = b;
-//            SHAPES.push_back(new Rectangle(x1, y1, x2, y2, colors_in));
-//        }
-//        
-//        else if (shape_type == "Circle")	{
-//            fin>>x1>>y1>>x2>>y2>>std::ws;
-//            fin >> r >> g >> b >> std::ws;
-//            
-//            colors_in[0] = r;
-//            colors_in[1] = g;
-//            colors_in[2] = b;
-//            SHAPES.push_back(new Circle(x1, y1, x2, y2, colors_in));
-//        }
-//    }
+    std::string key;
+    std::ifstream fin(FILENAME);
+    if(!fin)
+    {
+        std::cerr << "Unable to open " << FILENAME << std::endl;
+        return;
+    }
+    while(fin >> key)
+    {
+        Shape *s = 0;
+        if (key == "Triangle")	{
+            s = new Triangle();
+        } else if (key == "Rectangle") {
+            s = new Rectangle();
+        } else if (key == "Circle") {
+            s = new Circle();
+        }
+        s->load(fin);
+        SHAPES.push_back(s);
+    }
 }
 
 void undo()
 {
-    
+    if (SHAPES.size() > 0) {
+        Shape *tmp = SHAPES[SHAPES.size() - 1];
+        SHAPES.pop_back();
+        UNDO_SHAPES.push_back(tmp);
+    } else {
+        SHAPES.clear();
+    }
 }
 
 void redo()
 {
-    
+    if (UNDO_SHAPES.size() > 0) {
+        Shape *tmp = UNDO_SHAPES[UNDO_SHAPES.size() - 1];
+        UNDO_SHAPES.pop_back();
+        SHAPES.push_back(tmp);
+    } else {
+        UNDO_SHAPES.clear();
+    }
 }
 
 void clear()
 {
+    int i;
     POINTS.clear();
+    for (i = int(SHAPES.size() - 1); i >= 0; i--) {
+        UNDO_SHAPES.push_back(SHAPES[i]);
+    }
     SHAPES.clear();
 }
 
@@ -170,7 +147,7 @@ void createSliders()
 {
     SLIDERS.push_back(new Slider(Point(10, 160), "Blue", 6, 0, COLOR));
     SLIDERS.push_back(new Slider(Point(10, 190), "Green", 7, 0, COLOR));
-    SLIDERS.push_back(new Slider(Point(10, 220), "Red", 8, 1, COLOR));
+    SLIDERS.push_back(new Slider(Point(10, 220), "Red", 8, 255, COLOR));
 }
 
 // Outputs a string of text at the specified location.
@@ -193,21 +170,58 @@ void drawText(double x, double y, const char *string)
 
 void handleButtonClick(int x, int y, Button *btn)
 {
-    if (btn->getID() <= 5 || btn->getID() >= 3) {
+    if (btn->getID() == 1) {
+        exit(0);
+    }
+    if (btn->getID() == 2) {
+        clear();
+    }
+    if (btn->getID() >= 3 && btn->getID() <= 5) {
         MODE = btn->getID();
         for (auto itr : BUTTONS) {
             itr->setActive(false);
         }
         btn->setActive(true);
-        std::cout << "Mode set to " << MODE << std::endl;
+//        std::cout << "Mode set to " << MODE << std::endl;
     }
-    std::cout << "Button " << btn->getID() << " Clicked" << std::endl;
+    if (btn->getID() == 9) {
+        redo();
+    }
+    if (btn->getID() == 10) {
+        undo();
+    }
+    if (btn->getID() == 11) {
+        load();
+    }
+    if (btn->getID() == 12) {
+        save();
+    }
+//    std::cout << "Button " << btn->getID() << " Clicked" << std::endl;
 }
 
 void handleSliderClick(int x, int y, Slider *slider)
 {
-    MODE = slider->getID();
-    std::cout << "Slider " << slider->getID() << " Clicked" << std::endl;
+    if (slider->getID() == 6) {
+        COLOR[2] = slider->getValue();
+    }
+    if (slider->getID() == 7) {
+        COLOR[1] = slider->getValue();
+    }
+    if (slider->getID() == 8) {
+        COLOR[0] = slider->getValue();
+    }
+    for (auto itr : SLIDERS) {
+        itr->setColor(COLOR);
+    }
+    std::cout << "New Color Value: (";
+
+    for (auto itr : COLOR) {
+        std::cout << itr << ", " ;
+
+    }
+    std::cout << ")" << std::endl;
+
+//    std::cout << "Slider " << slider->getID() << " Clicked" << std::endl;
 }
 
 void handleOtherClick(int x, int y)
@@ -351,6 +365,9 @@ void mouse(int mouse_button, int state, int x, int y_inverted)
 // Your initialization code goes here.
 void initMyStuff()
 {
+//    COLOR->push_back(255);
+//    COLOR->push_back(0);
+//    COLOR->push_back(0)
     createButtons();
     BUTTONS[2]->setActive(true);
     createSliders();

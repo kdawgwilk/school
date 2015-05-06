@@ -8,6 +8,12 @@
 
 #include "Triangle.h"
 
+
+Triangle::Triangle()
+{
+    
+}
+
 Triangle::Triangle(Point p1, Point p2, Point p3, std::vector<double> color)
 :   Shape(color),
     mP1(p1),
@@ -42,9 +48,31 @@ void Triangle::draw()
     glEnd();
 }
 
-void Triangle::save(std::ostream &os) const
+void Triangle::setColor(std::vector<double> color)
 {
-    os << "";
+    mColor = color;
+}
+
+void Triangle::save(std::ostream &os)
+{
+    os << "Triangle " << mP1 << mP2 << mP3 << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+}
+
+void Triangle::load(std::istream &is)
+{
+    Point p1;
+    Point p2;
+    Point p3;
+    std::vector<double> color;
+    double r, g, b;
+    is >> p1 >> p2 >> p3 >> r >> g >> b;
+    color.push_back(r);
+    color.push_back(g);
+    color.push_back(b);
+    setP1(p1);
+    setP2(p2);
+    setP3(p3);
+    setColor(color);
 }
 
 Point Triangle::getP1()

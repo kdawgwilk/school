@@ -8,6 +8,12 @@
 
 #include "Rectangle.h"
 
+
+Rectangle::Rectangle()
+{
+    
+}
+
 Rectangle::Rectangle(Point p1, Point p2, std::vector<double> color)
 :   Shape(color),
     mP1(p1),
@@ -37,9 +43,30 @@ void Rectangle::draw()
     glEnd();
 }
 
-void Rectangle::save(std::ostream &os) const
+void Rectangle::setColor(std::vector<double> color)
 {
-    os << "";
+    mColor = color;
+}
+
+void Rectangle::save(std::ostream &os)
+{
+    os << "Rectangle " << mP1 << mP2 << int(mColor[0]) << " " << int(mColor[1]) << " " << int(mColor[3]) << std::endl;
+}
+
+void Rectangle::load(std::istream &is)
+{
+    Point p1;
+    Point p2;
+    std::vector<double> color;
+    double r, g, b;
+    is >> p1 >> p2 >> r >> g >> b;
+    color.push_back(r);
+    color.push_back(g);
+    color.push_back(b);
+    setP1(p1);
+    setP2(p2);
+    setColor(color);
+
 }
 
 Point Rectangle::getP1()

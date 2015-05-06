@@ -19,7 +19,6 @@ public:
     Button(Point p1, const char *label, int id, std::vector<double> color);
     
     virtual void draw();
-    virtual void save(std::ostream &os) const;
 
     bool contains(Point p);
     void setActive(bool state);

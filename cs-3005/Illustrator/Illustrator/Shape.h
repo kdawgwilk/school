@@ -27,9 +27,12 @@
 class Shape {
 public:
     
+    Shape();
     Shape(std::vector<double> color);
     virtual void draw() = 0;
-    virtual void save(std::ostream &os) const = 0;
+    virtual void setColor(std::vector<double> color) = 0;
+    virtual void save(std::ostream &os) = 0;
+    virtual void load(std::istream &is) = 0;
     
 protected:
     

@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A145DE511AF9D43500985404 /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = file.txt; path = Illustrator/file.txt; sourceTree = "<group>"; };
 		A14888AC1AF95D7E00FC1778 /* button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = button.cpp; sourceTree = "<group>"; };
 		A14888AD1AF95D7E00FC1778 /* button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
 		A14888AE1AF95D7E00FC1778 /* circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 				A1DC86651AD464C70071AEF8 /* Button.h */,
 				A1DC865A1AD464C70071AEF8 /* Slider.cpp */,
 				A1DC865B1AD464C70071AEF8 /* Slider.h */,
+				A145DE511AF9D43500985404 /* file.txt */,
 				A1A086FB1ADB597B005C66D5 /* tests */,
 				A1DC864D1AD464C70071AEF8 /* Illustrator */,
 				A14888AB1AF95D7E00FC1778 /* example */,
