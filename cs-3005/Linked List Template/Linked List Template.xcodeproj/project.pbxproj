@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A145DE5D1AFA715D00985404 /* 2_int_list_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE5B1AFA715D00985404 /* 2_int_list_tests.cpp */; };
+		A145DE5E1AFA715D00985404 /* 2_student_list_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE5C1AFA715D00985404 /* 2_student_list_tests.cpp */; };
+		A145DE631AFA721700985404 /* 3_student_list_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE621AFA721700985404 /* 3_student_list_tests.cpp */; };
+		A145DE681AFA734C00985404 /* 4_int_list_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A145DE661AFA734C00985404 /* 4_int_list_tests.cpp */; };
 		A1A086EF1ADB3A8C005C66D5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1F024571ABA739200BF2FB3 /* main.cpp */; };
 		A1A086F01ADB3A8C005C66D5 /* IntAux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1F024541ABA739200BF2FB3 /* IntAux.cpp */; };
 		A1A086F11ADB3A8C005C66D5 /* IntAux.h in Sources */ = {isa = PBXBuildFile; fileRef = A1F024551ABA739200BF2FB3 /* IntAux.h */; };
@@ -33,6 +37,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A145DE5B1AFA715D00985404 /* 2_int_list_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_int_list_tests.cpp; sourceTree = "<group>"; };
+		A145DE5C1AFA715D00985404 /* 2_student_list_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2_student_list_tests.cpp; sourceTree = "<group>"; };
+		A145DE5F1AFA721700985404 /* 3_DeleteNames-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3_DeleteNames-CS3005.txt"; sourceTree = "<group>"; };
+		A145DE601AFA721700985404 /* 3_InsertNames-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3_InsertNames-CS3005.txt"; sourceTree = "<group>"; };
+		A145DE611AFA721700985404 /* 3_RetrieveNames-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3_RetrieveNames-CS3005.txt"; sourceTree = "<group>"; };
+		A145DE621AFA721700985404 /* 3_student_list_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3_student_list_tests.cpp; sourceTree = "<group>"; };
+		A145DE641AFA734C00985404 /* 4_DeleteNums-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4_DeleteNums-CS3005.txt"; sourceTree = "<group>"; };
+		A145DE651AFA734C00985404 /* 4_InsertNums-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4_InsertNums-CS3005.txt"; sourceTree = "<group>"; };
+		A145DE661AFA734C00985404 /* 4_int_list_tests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 4_int_list_tests.cpp; sourceTree = "<group>"; };
+		A145DE671AFA734C00985404 /* 4_RetrieveNums-CS3005.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4_RetrieveNums-CS3005.txt"; sourceTree = "<group>"; };
 		A1F024481ABA72EA00BF2FB3 /* Linked List Template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Linked List Template"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F024521ABA730200BF2FB3 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
 		A1F024541ABA739200BF2FB3 /* IntAux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntAux.cpp; sourceTree = "<group>"; };
@@ -97,6 +111,16 @@
 			children = (
 				A1F0245D1ABA739200BF2FB3 /* 1_int_list_tests.cpp */,
 				A1F0245E1ABA739200BF2FB3 /* 1_student_list_tests.cpp */,
+				A145DE5B1AFA715D00985404 /* 2_int_list_tests.cpp */,
+				A145DE5C1AFA715D00985404 /* 2_student_list_tests.cpp */,
+				A145DE5F1AFA721700985404 /* 3_DeleteNames-CS3005.txt */,
+				A145DE601AFA721700985404 /* 3_InsertNames-CS3005.txt */,
+				A145DE611AFA721700985404 /* 3_RetrieveNames-CS3005.txt */,
+				A145DE621AFA721700985404 /* 3_student_list_tests.cpp */,
+				A145DE641AFA734C00985404 /* 4_DeleteNums-CS3005.txt */,
+				A145DE651AFA734C00985404 /* 4_InsertNums-CS3005.txt */,
+				A145DE661AFA734C00985404 /* 4_int_list_tests.cpp */,
+				A145DE671AFA734C00985404 /* 4_RetrieveNums-CS3005.txt */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -159,14 +183,18 @@
 			files = (
 				A1A086EF1ADB3A8C005C66D5 /* main.cpp in Sources */,
 				A1A086F01ADB3A8C005C66D5 /* IntAux.cpp in Sources */,
+				A145DE5E1AFA715D00985404 /* 2_student_list_tests.cpp in Sources */,
 				A1A086F11ADB3A8C005C66D5 /* IntAux.h in Sources */,
 				A1A086F21ADB3A8C005C66D5 /* LinkedList.h in Sources */,
 				A1A086F31ADB3A8C005C66D5 /* Student.cpp in Sources */,
 				A1A086F41ADB3A8C005C66D5 /* Student.h in Sources */,
 				A1A086F51ADB3A8C005C66D5 /* StudentAux.cpp in Sources */,
+				A145DE681AFA734C00985404 /* 4_int_list_tests.cpp in Sources */,
 				A1A086F61ADB3A8C005C66D5 /* StudentAux.h in Sources */,
 				A1A086F71ADB3A8C005C66D5 /* 1_int_list_tests.cpp in Sources */,
 				A1A086F81ADB3A8C005C66D5 /* 1_student_list_tests.cpp in Sources */,
+				A145DE631AFA721700985404 /* 3_student_list_tests.cpp in Sources */,
+				A145DE5D1AFA715D00985404 /* 2_int_list_tests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

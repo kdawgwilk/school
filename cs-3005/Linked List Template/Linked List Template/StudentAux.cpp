@@ -2,7 +2,7 @@
 #include "StudentAux.h"
 
 
-int ReadStudentFile(const std::string &filename, StudentLinkedList &students)
+int ReadStudentFile(const std::string &filename, LinkedList<Student> &students)
 {
     int c = 0;
     std::ifstream fin(filename);
@@ -31,7 +31,7 @@ int ReadStudentFile(const std::string &filename, StudentLinkedList &students)
     return c;
 }
 
-int RemoveStudents(const std::string &filename, StudentLinkedList &students)
+int RemoveStudents(const std::string &filename, LinkedList<Student> &students)
 {
     int c = 0;
     std::ifstream fin(filename);
@@ -62,7 +62,7 @@ int RemoveStudents(const std::string &filename, StudentLinkedList &students)
     return c;
 }
 
-double AverageAgeStudents(const std::string &filename, StudentLinkedList &students)
+double AverageAgeStudents(const std::string &filename, LinkedList<Student> &students)
 {
     double avg;
     double c = 0;

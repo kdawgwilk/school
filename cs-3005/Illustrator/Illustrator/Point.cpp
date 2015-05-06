@@ -63,7 +63,7 @@ void Point::load(std::istream &is)
 
 std::ostream &operator<<(std::ostream &os, const Point &rhs)
 {
-    os << rhs.getX() << " " << rhs.getY() << " ";
+    os << int(rhs.getX()) << " " << int(rhs.getY()) << " ";
     return os;
 }
 

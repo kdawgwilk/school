@@ -154,7 +154,7 @@ T LinkedList<T>::Retrieve(const T &key)
 }
 
 template<class T>
-std::ostream &operator<<(std::ostream &os, const LinkedList &rhs)
+std::ostream &operator<<(std::ostream &os, const LinkedList<T> &rhs)
 {
     Node<T> *curr = rhs.mHead;
     while (curr) {
@@ -165,7 +165,7 @@ std::ostream &operator<<(std::ostream &os, const LinkedList &rhs)
 }
 
 template<class T>
-std::istream &operator>>(std::istream &is, LinkedList &rhs)
+std::istream &operator>>(std::istream &is, LinkedList<T> &rhs)
 {
     while (is) {
         T *student = new T();

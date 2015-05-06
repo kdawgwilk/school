@@ -47,16 +47,6 @@ void Slider::draw(std::vector<double> color)
     glVertex2d(mP1.getX(), mP2.getY());
     glEnd();
     
-    // Slider Position
-    glColor3d(1 - color[0], 1 - color[1], 1 - color[2]);
-    glBegin(GL_QUADS);
-    double value = mP1.getX() + (100 * mValue) - 5;
-    glVertex2d(value, mP1.getY() - 3);
-    glVertex2d(value + 10, mP1.getY() - 3);
-    glVertex2d(value + 10, mP2.getY() + 3);
-    glVertex2d(value, mP2.getY() + 3);
-    glEnd();
-    
     // Slider Label
     void *font = GLUT_BITMAP_9_BY_15;
     
@@ -75,6 +65,16 @@ void Slider::draw(std::vector<double> color)
     }
     
     glDisable(GL_BLEND);
+    
+    // Slider Position
+    glColor3d(1 - color[0], 1 - color[1], 1 - color[2]);
+    glBegin(GL_QUADS);
+    double value = mP1.getX() + (100 * mValue) - 5;
+    glVertex2d(value, mP1.getY() - 3);
+    glVertex2d(value + 10, mP1.getY() - 3);
+    glVertex2d(value + 10, mP2.getY() + 3);
+    glVertex2d(value, mP2.getY() + 3);
+    glEnd();
 }
 
 bool Slider::contains(Point p)

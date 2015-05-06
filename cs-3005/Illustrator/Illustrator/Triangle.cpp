@@ -55,7 +55,12 @@ void Triangle::setColor(std::vector<double> color)
 
 void Triangle::save(std::ostream &os)
 {
-    os << "Triangle " << mP1 << mP2 << mP3 << mColor[0] << " " << mColor[1] << " " << mColor[3] << std::endl;
+    double r, g, b;
+    double scale = 0.01;  // i.e. round to nearest one-hundreth
+    r = (int)(mColor[0] / scale) * scale;
+    g = (int)(mColor[1] / scale) * scale;
+    b = (int)(mColor[2] / scale) * scale;
+    os << "Triangle " << mP1 << mP2 << mP3 << r << " " << g << " " << b << std::endl;
 }
 
 void Triangle::load(std::istream &is)

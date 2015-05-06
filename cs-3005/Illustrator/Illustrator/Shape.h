@@ -10,6 +10,7 @@
 #define __Illustrator__Shape__
 
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
 

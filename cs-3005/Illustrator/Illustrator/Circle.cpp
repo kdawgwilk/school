@@ -64,7 +64,12 @@ void Circle::setColor(std::vector<double> color)
 
 void Circle::save(std::ostream &os)
 {
-    os << "Circle " << mCenter << mRadius << " " << mColor[0] << " " << mColor[1] << " " << mColor[3] << std::endl;
+    double r, g, b;
+    double scale = 0.01;  // i.e. round to nearest one-hundreth
+    r = (int)(mColor[0] / scale) * scale;
+    g = (int)(mColor[1] / scale) * scale;
+    b = (int)(mColor[2] / scale) * scale;
+    os << "Circle " << mCenter << int(mRadius) << " " << r << " " << g << " " << b << std::endl;
 }
 
 void Circle::load(std::istream &is)
