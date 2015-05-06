@@ -21,7 +21,7 @@ public:
     void setY(double y);
     
     virtual void draw();
-//    virtual void save(std::ostream &os) const;
+    virtual void save(std::ostream &os) const;
     
     double getX();
     double getY();

@@ -29,7 +29,7 @@ public:
     
     Shape(std::vector<double> color);
     virtual void draw() = 0;
-//    virtual void save() = 0;
+    virtual void save(std::ostream &os) const = 0;
     
 protected:
     

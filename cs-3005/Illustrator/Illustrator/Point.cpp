@@ -40,6 +40,11 @@ void Point::draw()
     glEnd();
 }
 
+void Point::save(std::ostream &os) const
+{
+    os << "";
+}
+
 double Point::getX()
 {
     return mX;
