@@ -242,16 +242,15 @@ void display(void)
     
     // Test lines that draw all three shapes and some text.
     // Delete these when you get your code working.
-//    glColor3d(0,0,1);
+   
+    drawShapes();
+    drawPoints();
     
     drawButtons();
     drawSliders();
     
-    drawPoints();
-    drawShapes();
-    
-//    glColor3d(1, 1, 1);
-//    drawText(150, 100, "Can you see this black text and 3 blue shapes?");
+    glColor3d(1, 1, 1);
+    drawText(300, 10, "CS-3005 - Illustrator");
     
     glutSwapBuffers();
 }
