@@ -25,6 +25,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/calendar', {
+        templateUrl: 'views/calendar.html',
+        controller: 'CalendarCtrl'
+      })
       .when('/event', {
         templateUrl: 'views/event.html',
         controller: 'EventCtrl'

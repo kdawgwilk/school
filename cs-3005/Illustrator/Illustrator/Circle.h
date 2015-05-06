@@ -9,28 +9,32 @@
 #ifndef __Illustrator__Circle__
 #define __Illustrator__Circle__
 
+#include <cmath>
+#include "Shape.h"
 #include "Point.h"
 
 
-class Circle {
+class Circle: public Shape {
 public:
     
-    Circle(Point center, int radius);
+    Circle(Point center, double radius, std::vector<double> colors);
+    Circle(Point center, Point p, std::vector<double> colors);
     
     void setCenter(Point p);
-    void setRadius(int r);
+    void setRadius(double r);
     
     virtual void draw();
+    virtual void save(std::ostream &os) const;
     
     Point getCenter();
-    int getRadius();
+    double getRadius();
     
 protected:
     
 private:
     
     Point mCenter;
-    int mRadius;
+    double mRadius;
 };
 
 #endif /* defined(__Illustrator__Circle__) */

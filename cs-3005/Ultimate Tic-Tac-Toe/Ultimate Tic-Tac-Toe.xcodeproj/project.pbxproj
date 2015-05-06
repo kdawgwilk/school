@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11B18241AF57664003B70DF /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B18221AF57664003B70DF /* Board.cpp */; };
 		A1DC86831AD465D20071AEF8 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612714BF5760003EF908 /* GLUT.framework */; };
 		A1DC86841AD465D80071AEF8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612814BF5760003EF908 /* OpenGL.framework */; };
 		A1DC86871AD466320071AEF8 /* graphics1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86851AD466320071AEF8 /* graphics1.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A11B18221AF57664003B70DF /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		A11B18231AF57664003B70DF /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		A1DC867C1AD465B90071AEF8 /* Ultimate Tic-Tac-Toe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ultimate Tic-Tac-Toe"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DC86851AD466320071AEF8 /* graphics1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics1.cpp; sourceTree = "<group>"; };
 		A1DC86861AD466320071AEF8 /* graphics1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics1.h; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 			children = (
 				A1DC86851AD466320071AEF8 /* graphics1.cpp */,
 				A1DC86861AD466320071AEF8 /* graphics1.h */,
+				A11B18221AF57664003B70DF /* Board.cpp */,
+				A11B18231AF57664003B70DF /* Board.h */,
 			);
 			path = "Ultimate Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11B18241AF57664003B70DF /* Board.cpp in Sources */,
 				A1DC86881AD466490071AEF8 /* graphics1.h in Sources */,
 				A1DC86871AD466320071AEF8 /* graphics1.cpp in Sources */,
 			);
@@ -261,6 +267,7 @@
 				A1DC86821AD465BA0071AEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3EA611414BF56F5003EF908 /* Build configuration list for PBXProject "Ultimate Tic-Tac-Toe" */ = {
 			isa = XCConfigurationList;

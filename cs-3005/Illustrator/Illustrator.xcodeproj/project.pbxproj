@@ -8,32 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A1A086FA1ADB5968005C66D5 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A086F91ADB5968005C66D5 /* gtest.framework */; };
-		A1A086FD1ADB59D6005C66D5 /* PointTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A086FC1ADB59D6005C66D5 /* PointTest.cpp */; };
-		A1A086FF1ADB5B66005C66D5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A086FE1ADB5B66005C66D5 /* main.cpp */; };
-		A1A087011ADB5F82005C66D5 /* RectangleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A087001ADB5F82005C66D5 /* RectangleTest.cpp */; };
-		A1A087031ADB5F9E005C66D5 /* CircleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A087021ADB5F9E005C66D5 /* CircleTest.cpp */; };
-		A1A087051ADB5FB5005C66D5 /* ShapeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A087041ADB5FB5005C66D5 /* ShapeTest.cpp */; };
-		A1A087071ADB5FC7005C66D5 /* TriangleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A087061ADB5FC7005C66D5 /* TriangleTest.cpp */; };
-		A1A087091ADB5FDC005C66D5 /* ButtonTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A087081ADB5FDC005C66D5 /* ButtonTest.cpp */; };
-		A1A0870B1ADB5FF3005C66D5 /* SliderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1A0870A1ADB5FF3005C66D5 /* SliderTest.cpp */; };
 		A1DC86191AD464360071AEF8 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612714BF5760003EF908 /* GLUT.framework */; };
 		A1DC861A1AD464430071AEF8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612814BF5760003EF908 /* OpenGL.framework */; };
 		A1DC86681AD4656D0071AEF8 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86581AD464C70071AEF8 /* Point.cpp */; };
-		A1DC86691AD4656D0071AEF8 /* Point.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86591AD464C70071AEF8 /* Point.h */; };
 		A1DC866A1AD4656D0071AEF8 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865A1AD464C70071AEF8 /* Slider.cpp */; };
-		A1DC866B1AD4656D0071AEF8 /* Slider.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865B1AD464C70071AEF8 /* Slider.h */; };
 		A1DC866C1AD4656D0071AEF8 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865C1AD464C70071AEF8 /* Triangle.cpp */; };
-		A1DC866D1AD4656D0071AEF8 /* Triangle.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865D1AD464C70071AEF8 /* Triangle.h */; };
 		A1DC866E1AD4656D0071AEF8 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865E1AD464C70071AEF8 /* Rectangle.cpp */; };
-		A1DC866F1AD4656D0071AEF8 /* Rectangle.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC865F1AD464C70071AEF8 /* Rectangle.h */; };
 		A1DC86701AD4656D0071AEF8 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86601AD464C70071AEF8 /* Circle.cpp */; };
-		A1DC86711AD4656D0071AEF8 /* Circle.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86611AD464C70071AEF8 /* Circle.h */; };
 		A1DC86721AD4656D0071AEF8 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86621AD464C70071AEF8 /* Shape.cpp */; };
-		A1DC86731AD4656D0071AEF8 /* Shape.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86631AD464C70071AEF8 /* Shape.h */; };
 		A1DC86741AD4656D0071AEF8 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86641AD464C70071AEF8 /* Button.cpp */; };
-		A1DC86751AD4656D0071AEF8 /* Button.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86651AD464C70071AEF8 /* Button.h */; };
-		A1DC86761AD4656D0071AEF8 /* graphics1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86661AD464C70071AEF8 /* graphics1.cpp */; };
-		A1DC86771AD4656D0071AEF8 /* graphics1.h in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86671AD464C70071AEF8 /* graphics1.h */; };
+		A1DC86761AD4656D0071AEF8 /* OpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1DC86661AD464C70071AEF8 /* OpenGL.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,9 +33,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A14888AC1AF95D7E00FC1778 /* button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = button.cpp; sourceTree = "<group>"; };
+		A14888AD1AF95D7E00FC1778 /* button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
+		A14888AE1AF95D7E00FC1778 /* circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
+		A14888AF1AF95D7E00FC1778 /* circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circle.h; sourceTree = "<group>"; };
+		A14888B11AF95D7E00FC1778 /* graphics1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graphics1.cpp; sourceTree = "<group>"; };
+		A14888B31AF95D7E00FC1778 /* out.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = out.txt; sourceTree = "<group>"; };
+		A14888B41AF95D7E00FC1778 /* rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rectangle.cpp; sourceTree = "<group>"; };
+		A14888B51AF95D7E00FC1778 /* rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rectangle.h; sourceTree = "<group>"; };
+		A14888B61AF95D7E00FC1778 /* shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shape.cpp; sourceTree = "<group>"; };
+		A14888B71AF95D7E00FC1778 /* shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shape.h; sourceTree = "<group>"; };
+		A14888B81AF95D7E00FC1778 /* shapes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shapes.cpp; sourceTree = "<group>"; };
+		A14888B91AF95D7E00FC1778 /* shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shapes.h; sourceTree = "<group>"; };
+		A14888BC1AF95D7E00FC1778 /* triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
+		A14888BD1AF95D7E00FC1778 /* triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
 		A1A086F91ADB5968005C66D5 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
 		A1A086FC1ADB59D6005C66D5 /* PointTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointTest.cpp; path = Illustrator/PointTest.cpp; sourceTree = "<group>"; };
-		A1A086FE1ADB5B66005C66D5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A1A087001ADB5F82005C66D5 /* RectangleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RectangleTest.cpp; path = Illustrator/RectangleTest.cpp; sourceTree = "<group>"; };
 		A1A087021ADB5F9E005C66D5 /* CircleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircleTest.cpp; path = Illustrator/CircleTest.cpp; sourceTree = "<group>"; };
 		A1A087041ADB5FB5005C66D5 /* ShapeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShapeTest.cpp; path = Illustrator/ShapeTest.cpp; sourceTree = "<group>"; };
@@ -83,8 +80,8 @@
 		A1DC86631AD464C70071AEF8 /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = Illustrator/Shape.h; sourceTree = "<group>"; };
 		A1DC86641AD464C70071AEF8 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = Illustrator/Button.cpp; sourceTree = "<group>"; };
 		A1DC86651AD464C70071AEF8 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = Illustrator/Button.h; sourceTree = "<group>"; };
-		A1DC86661AD464C70071AEF8 /* graphics1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = graphics1.cpp; path = Illustrator/graphics1.cpp; sourceTree = "<group>"; };
-		A1DC86671AD464C70071AEF8 /* graphics1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = graphics1.h; path = Illustrator/graphics1.h; sourceTree = "<group>"; };
+		A1DC86661AD464C70071AEF8 /* OpenGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGL.cpp; path = Illustrator/OpenGL.cpp; sourceTree = "<group>"; };
+		A1DC86671AD464C70071AEF8 /* OpenGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenGL.h; path = Illustrator/OpenGL.h; sourceTree = "<group>"; };
 		D3EA612714BF5760003EF908 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		D3EA612814BF5760003EF908 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -103,6 +100,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14888AB1AF95D7E00FC1778 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				A14888B11AF95D7E00FC1778 /* graphics1.cpp */,
+				A14888B61AF95D7E00FC1778 /* shape.cpp */,
+				A14888B71AF95D7E00FC1778 /* shape.h */,
+				A14888B81AF95D7E00FC1778 /* shapes.cpp */,
+				A14888B91AF95D7E00FC1778 /* shapes.h */,
+				A14888AE1AF95D7E00FC1778 /* circle.cpp */,
+				A14888AF1AF95D7E00FC1778 /* circle.h */,
+				A14888B41AF95D7E00FC1778 /* rectangle.cpp */,
+				A14888B51AF95D7E00FC1778 /* rectangle.h */,
+				A14888BC1AF95D7E00FC1778 /* triangle.cpp */,
+				A14888BD1AF95D7E00FC1778 /* triangle.h */,
+				A14888AC1AF95D7E00FC1778 /* button.cpp */,
+				A14888AD1AF95D7E00FC1778 /* button.h */,
+				A14888B31AF95D7E00FC1778 /* out.txt */,
+			);
+			name = example;
+			path = Illustrator/example;
+			sourceTree = "<group>";
+		};
 		A1A086FB1ADB597B005C66D5 /* tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,25 +167,25 @@
 		D3EA610F14BF56F5003EF908 = {
 			isa = PBXGroup;
 			children = (
-				A1A086FE1ADB5B66005C66D5 /* main.cpp */,
-				A1DC86661AD464C70071AEF8 /* graphics1.cpp */,
-				A1DC86671AD464C70071AEF8 /* graphics1.h */,
-				A1DC86581AD464C70071AEF8 /* Point.cpp */,
-				A1DC86591AD464C70071AEF8 /* Point.h */,
-				A1DC865A1AD464C70071AEF8 /* Slider.cpp */,
-				A1DC865B1AD464C70071AEF8 /* Slider.h */,
-				A1DC865C1AD464C70071AEF8 /* Triangle.cpp */,
-				A1DC865D1AD464C70071AEF8 /* Triangle.h */,
-				A1DC865E1AD464C70071AEF8 /* Rectangle.cpp */,
-				A1DC865F1AD464C70071AEF8 /* Rectangle.h */,
-				A1DC86601AD464C70071AEF8 /* Circle.cpp */,
-				A1DC86611AD464C70071AEF8 /* Circle.h */,
+				A1DC86661AD464C70071AEF8 /* OpenGL.cpp */,
+				A1DC86671AD464C70071AEF8 /* OpenGL.h */,
 				A1DC86621AD464C70071AEF8 /* Shape.cpp */,
 				A1DC86631AD464C70071AEF8 /* Shape.h */,
+				A1DC86581AD464C70071AEF8 /* Point.cpp */,
+				A1DC86591AD464C70071AEF8 /* Point.h */,
+				A1DC865C1AD464C70071AEF8 /* Triangle.cpp */,
+				A1DC865D1AD464C70071AEF8 /* Triangle.h */,
+				A1DC86601AD464C70071AEF8 /* Circle.cpp */,
+				A1DC86611AD464C70071AEF8 /* Circle.h */,
+				A1DC865E1AD464C70071AEF8 /* Rectangle.cpp */,
+				A1DC865F1AD464C70071AEF8 /* Rectangle.h */,
 				A1DC86641AD464C70071AEF8 /* Button.cpp */,
 				A1DC86651AD464C70071AEF8 /* Button.h */,
+				A1DC865A1AD464C70071AEF8 /* Slider.cpp */,
+				A1DC865B1AD464C70071AEF8 /* Slider.h */,
 				A1A086FB1ADB597B005C66D5 /* tests */,
 				A1DC864D1AD464C70071AEF8 /* Illustrator */,
+				A14888AB1AF95D7E00FC1778 /* example */,
 				D355F37714BF71440064E474 /* Frameworks */,
 				D3EA611B14BF56F5003EF908 /* Products */,
 			);
@@ -236,29 +255,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1DC86681AD4656D0071AEF8 /* Point.cpp in Sources */,
-				A1A086FD1ADB59D6005C66D5 /* PointTest.cpp in Sources */,
-				A1A0870B1ADB5FF3005C66D5 /* SliderTest.cpp in Sources */,
-				A1A086FF1ADB5B66005C66D5 /* main.cpp in Sources */,
-				A1A087071ADB5FC7005C66D5 /* TriangleTest.cpp in Sources */,
-				A1DC86691AD4656D0071AEF8 /* Point.h in Sources */,
 				A1DC866A1AD4656D0071AEF8 /* Slider.cpp in Sources */,
-				A1A087031ADB5F9E005C66D5 /* CircleTest.cpp in Sources */,
-				A1DC866B1AD4656D0071AEF8 /* Slider.h in Sources */,
 				A1DC866C1AD4656D0071AEF8 /* Triangle.cpp in Sources */,
-				A1DC866D1AD4656D0071AEF8 /* Triangle.h in Sources */,
 				A1DC866E1AD4656D0071AEF8 /* Rectangle.cpp in Sources */,
-				A1DC866F1AD4656D0071AEF8 /* Rectangle.h in Sources */,
-				A1A087011ADB5F82005C66D5 /* RectangleTest.cpp in Sources */,
-				A1A087091ADB5FDC005C66D5 /* ButtonTest.cpp in Sources */,
 				A1DC86701AD4656D0071AEF8 /* Circle.cpp in Sources */,
-				A1DC86711AD4656D0071AEF8 /* Circle.h in Sources */,
-				A1A087051ADB5FB5005C66D5 /* ShapeTest.cpp in Sources */,
 				A1DC86721AD4656D0071AEF8 /* Shape.cpp in Sources */,
-				A1DC86731AD4656D0071AEF8 /* Shape.h in Sources */,
 				A1DC86741AD4656D0071AEF8 /* Button.cpp in Sources */,
-				A1DC86751AD4656D0071AEF8 /* Button.h in Sources */,
-				A1DC86761AD4656D0071AEF8 /* graphics1.cpp in Sources */,
-				A1DC86771AD4656D0071AEF8 /* graphics1.h in Sources */,
+				A1DC86761AD4656D0071AEF8 /* OpenGL.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

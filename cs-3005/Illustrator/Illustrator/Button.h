@@ -9,13 +9,26 @@
 #ifndef __Illustrator__Button__
 #define __Illustrator__Button__
 
-#include <stdio.h>
+
+#include "Rectangle.h"
 
 
-class Button {
+class Button: public Rectangle {
 public:
     
+    Button(Point p1, const char *label, int id, std::vector<double> color);
+    
+    virtual void draw();
+    virtual void save(std::ostream &os) const;
+
+    bool contains(Point p);
+    void setActive(bool state);
+    int getID();
+
 protected:
+    const char *mLabel;
+    bool mActive;
+    int mID;
     
 private:
     

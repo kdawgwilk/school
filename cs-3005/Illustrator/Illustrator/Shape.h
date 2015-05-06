@@ -9,15 +9,31 @@
 #ifndef __Illustrator__Shape__
 #define __Illustrator__Shape__
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <string>
+
+#ifdef _WIN32
+#include "glut.h"
+#else
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+#endif
 
 
 class Shape {
 public:
     
-    virtual void draw();
+    Shape(std::vector<double> color);
+    virtual void draw() = 0;
+//    virtual void save() = 0;
     
 protected:
+    
+    std::vector<double> mColor;
     
 private:
     

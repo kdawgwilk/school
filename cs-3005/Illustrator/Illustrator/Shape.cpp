@@ -7,3 +7,10 @@
 //
 
 #include "Shape.h"
+
+
+Shape::Shape(std::vector<double> color)
+:   mColor(color)
+{
+
+}

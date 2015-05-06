@@ -9,25 +9,30 @@
 #ifndef __Illustrator__Point__
 #define __Illustrator__Point__
 
+#include <cmath>
+#include "Shape.h"
 
-class Point {
+
+class Point: public Shape {
 public:
     
-    Point(int x, int y);
-    void setX(int x);
-    void setY(int y);
+    Point(double x, double y);
+    void setX(double x);
+    void setY(double y);
     
-    void draw();
+    virtual void draw();
+//    virtual void save(std::ostream &os) const;
     
-    int getX();
-    int getY();
+    double getX();
+    double getY();
     
 protected:
     
 private:
     
-    int mX;
-    int mY;
+    double mX;
+    double mY;
+    double mRadius;
     
 };
 

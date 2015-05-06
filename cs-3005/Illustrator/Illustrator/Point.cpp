@@ -8,35 +8,44 @@
 
 #include "Point.h"
 
-Point::Point(int x, int y)
-:   mX(x),
-    mY(y)
+Point::Point(double x, double y)
+:   Shape(std::vector<double>{255, 255, 255}),
+    mX(x),
+    mY(y),
+    mRadius(3)
 {
     
 }
 
-void Point::setX(int x)
+void Point::setX(double x)
 {
     mX = x;
 }
 
-void Point::setY(int y)
+void Point::setY(double y)
 {
     mY = y;
 }
 
 void Point::draw()
 {
-//    pygame.draw.circle(surface, (255, 255, 255), (self.x, self.y), 3, 0)
-    
+    glColor3d(mColor[0], mColor[1], mColor[2]);
+    glBegin(GL_POLYGON);
+    for(int i = 0; i < 32; i++) {
+        double theta = (double)i / 32.0 * 2.0 * 3.1415926;
+        double x = mX + mRadius * cos(theta);
+        double y = mY + mRadius * sin(theta);
+        glVertex2d(x, y);
+    }
+    glEnd();
 }
 
-int Point::getX()
+double Point::getX()
 {
     return mX;
 }
 
-int Point::getY()
+double Point::getY()
 {
     return mY;
 }

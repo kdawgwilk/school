@@ -9,13 +9,27 @@
 #ifndef __Illustrator__Slider__
 #define __Illustrator__Slider__
 
-#include <stdio.h>
+#include <cmath>
+#include "Point.h"
+#include "Button.h"
 
 
-class Slider {
+class Slider: public Button {
 public:
+    Slider(Point p1, const char *label, int id, double value, std::vector<double> color);
+    
+    void setColor(std::vector<double> color);
+    void setValue(double value);
+    std::vector<double> getOppositeColor();
+//    virtual void draw();
+//    bool contains(Point p);
+    
+    int getID();
+    double getValue();
     
 protected:
+    
+    double mValue;
     
 private:
     

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11B181D1AF573F8003B70DF /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B181B1AF573F8003B70DF /* FileUtils.cpp */; };
+		A11B18201AF57478003B70DF /* Babbler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B181E1AF57478003B70DF /* Babbler.cpp */; };
+		A11B182B1AF5C52C003B70DF /* Words.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B18291AF5C52C003B70DF /* Words.cpp */; };
+		A11B182E1AF5C53A003B70DF /* Followers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A11B182C1AF5C53A003B70DF /* Followers.cpp */; };
 		A1BCAC9B1AF1D4530049214F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1BCAC9A1AF1D4530049214F /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +27,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A11B181A1AF572A9003B70DF /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		A11B181B1AF573F8003B70DF /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
+		A11B181C1AF573F8003B70DF /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		A11B181E1AF57478003B70DF /* Babbler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Babbler.cpp; sourceTree = "<group>"; };
+		A11B181F1AF57478003B70DF /* Babbler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Babbler.h; sourceTree = "<group>"; };
+		A11B18211AF57585003B70DF /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		A11B18291AF5C52C003B70DF /* Words.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Words.cpp; sourceTree = "<group>"; };
+		A11B182A1AF5C52C003B70DF /* Words.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Words.h; sourceTree = "<group>"; };
+		A11B182C1AF5C53A003B70DF /* Followers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Followers.cpp; sourceTree = "<group>"; };
+		A11B182D1AF5C53A003B70DF /* Followers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Followers.h; sourceTree = "<group>"; };
 		A1BCAC971AF1D4530049214F /* Babbler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Babbler; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BCAC9A1AF1D4530049214F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A1E354D91AF6C9400071D9FD /* eap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = eap.txt; sourceTree = "<group>"; };
+		A1E354DA1AF6CA470071D9FD /* bom.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bom.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,18 @@
 			isa = PBXGroup;
 			children = (
 				A1BCAC9A1AF1D4530049214F /* main.cpp */,
+				A11B181E1AF57478003B70DF /* Babbler.cpp */,
+				A11B181F1AF57478003B70DF /* Babbler.h */,
+				A11B18291AF5C52C003B70DF /* Words.cpp */,
+				A11B182A1AF5C52C003B70DF /* Words.h */,
+				A11B182C1AF5C53A003B70DF /* Followers.cpp */,
+				A11B182D1AF5C53A003B70DF /* Followers.h */,
+				A11B181B1AF573F8003B70DF /* FileUtils.cpp */,
+				A11B181C1AF573F8003B70DF /* FileUtils.h */,
+				A11B181A1AF572A9003B70DF /* input.txt */,
+				A1E354D91AF6C9400071D9FD /* eap.txt */,
+				A1E354DA1AF6CA470071D9FD /* bom.txt */,
+				A11B18211AF57585003B70DF /* output.txt */,
 			);
 			path = Babbler;
 			sourceTree = "<group>";
@@ -119,6 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BCAC9B1AF1D4530049214F /* main.cpp in Sources */,
+				A11B182B1AF5C52C003B70DF /* Words.cpp in Sources */,
+				A11B182E1AF5C53A003B70DF /* Followers.cpp in Sources */,
+				A11B18201AF57478003B70DF /* Babbler.cpp in Sources */,
+				A11B181D1AF573F8003B70DF /* FileUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +267,7 @@
 				A1BCACA01AF1D4530049214F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
