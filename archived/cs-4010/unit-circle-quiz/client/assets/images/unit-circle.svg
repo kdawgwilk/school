@@ -1,0 +1,23 @@
+    <svg id="unit-circle" version="1.1" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510">
+      <style type="text/css">
+<!--         <![CDATA[
+        .st0{fill:none;stroke:#B5B5B6;stroke-miterlimit:10;}
+        .st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+        ]]> -->
+      </style>
+      <line class="st0" x1="254.008" y1="254.312" x2="78.469" y2="78.772"/>
+      <line class="st0" x1="254" y1="255" x2="39.01" y2="130.875"/>
+      <line class="st0" x1="130.874" y1="40.009" x2="255" y2="255"/>
+      <line class="st0" x1="254.493" y1="256" x2="430.032" y2="431.54"/>
+      <line class="st0" x1="254.501" y1="255.312" x2="469.491" y2="379.438"/>
+      <line class="st0" x1="377.627" y1="470.304" x2="253.501" y2="255.312"/>
+      <line class="st0" x1="254.312" y1="255.305" x2="78.772" y2="430.844"/>
+      <line class="st0" x1="255" y1="255.312" x2="130.875" y2="470.303"/>
+      <line class="st0" x1="40.008" y1="378.438" x2="255" y2="254.312"/>
+      <line class="st0" x1="254.688" y1="254.508" x2="430.228" y2="78.968"/>
+      <line class="st0" x1="254" y1="254.5" x2="378.126" y2="39.509"/>
+      <line class="st0" x1="468.991" y1="131.372" x2="254" y2="255.5"/>
+      <line class="st0" x1="254.008" y1="4.312" x2="254.008" y2="504.312"/>
+      <line class="st0" x1="5" y1="255" x2="505" y2="255"/>
+      <circle class="st0" cx="255" cy="255" r="250"/>
+    </svg>

@@ -1,0 +1,19 @@
+#custom-unit-circle {
+  position: relative;
+  /*left:100px;*/
+  top:10px;
+  width:600px;
+  height:550px;
+  /*border: dotted 1px #000;*/
+}
+.custom-alert {
+  padding: 5px;
+  /*margin-top:15px;*/
+  border-radius: 3px;
+  text-align:center;
+}
+
+#status {
+  font-size: 20px;
+  /*background-color: #4393B9;*/
+}
