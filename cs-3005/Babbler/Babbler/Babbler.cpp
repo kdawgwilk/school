@@ -56,6 +56,14 @@ bool Babbler::babble() {
     }
     mBabbled.clear();
     randomGroup = mFile->get_random_group(mLevel);
+    // Cut in Section
+//    for (auto const itr : randomGroup) {
+//        if (itr.size() == 4) {
+//            mBabbled.push_back(itr + ">");
+//        } else {
+//            mBabbled.push_back(itr);
+//        }
+//    }
     for (auto const itr : randomGroup) {
         mBabbled.push_back(itr);
     }
@@ -64,6 +72,12 @@ bool Babbler::babble() {
         if (randomWord == "Error") {
             randomGroup = mFile->get_random_group(mLevel);
             for (auto const itr : randomGroup) {
+                // Cut in section
+//                if (itr.size() == 4) {
+//                    mBabbled.push_back(itr + ">");
+//                } else {
+//                    mBabbled.push_back(itr);
+//                }
                 mBabbled.push_back(itr);
             }
         } else {
@@ -75,11 +89,11 @@ bool Babbler::babble() {
 }
 
 bool Babbler::print_babbled() {
-//    mFollowers->print_followers();
-    std::cout << "Printing Babbled Words:" << std::endl << std::endl;
-    for (auto const itr : mBabbled) {
-        std::cout << itr << " ";
-    }
+    mFollowers->print_followers();
+//    std::cout << "Printing Babbled Words:" << std::endl << std::endl;
+//    for (auto const itr : mBabbled) {
+//        std::cout << itr << " ";
+//    }
 //    mWords->print_words();
     return true;
 }

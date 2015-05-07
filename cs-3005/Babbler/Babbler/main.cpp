@@ -16,10 +16,12 @@ int main(int argc, const char * argv[]) {
     // Book of Mormon
 //    const std::string ifilename = "bom.txt";
     
-    const std::string ifilename = "input.txt";
+//    const std::string ifilename = "cut-in.txt";
+    const std::string ifilename = "the-in.txt";
+//    const std::string ifilename = "input.txt";
     const std::string ofilename = "output.txt";
-    long length = 200;
-    int level = 6;
+    long length = 100;
+    int level = 1;
     
     Babbler *b = new Babbler(length, level, ifilename, ofilename);
     

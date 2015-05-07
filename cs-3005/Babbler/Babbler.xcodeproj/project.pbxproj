@@ -39,6 +39,8 @@
 		A11B182D1AF5C53A003B70DF /* Followers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Followers.h; sourceTree = "<group>"; };
 		A1BCAC971AF1D4530049214F /* Babbler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Babbler; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BCAC9A1AF1D4530049214F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A1E129651AFBE85000D2117D /* the-in.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "the-in.txt"; sourceTree = "<group>"; };
+		A1E129661AFBEA7800D2117D /* cut-in.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "cut-in.txt"; sourceTree = "<group>"; };
 		A1E354D91AF6C9400071D9FD /* eap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = eap.txt; sourceTree = "<group>"; };
 		A1E354DA1AF6CA470071D9FD /* bom.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bom.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,8 @@
 				A11B181B1AF573F8003B70DF /* FileUtils.cpp */,
 				A11B181C1AF573F8003B70DF /* FileUtils.h */,
 				A11B181A1AF572A9003B70DF /* input.txt */,
+				A1E129661AFBEA7800D2117D /* cut-in.txt */,
+				A1E129651AFBE85000D2117D /* the-in.txt */,
 				A1E354D91AF6C9400071D9FD /* eap.txt */,
 				A1E354DA1AF6CA470071D9FD /* bom.txt */,
 				A11B18211AF57585003B70DF /* output.txt */,

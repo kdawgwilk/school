@@ -84,6 +84,7 @@ std::string Followers::get_random_follower(std::vector<std::string> words) {
 std::string Followers::pick_random(std::map<std::string, int> followers) {
     int count = 0;
     int i = 0;
+    std::string randomFollower;
     for (auto const itr : followers) {
         count += itr.second;
     }
@@ -99,7 +100,14 @@ std::string Followers::pick_random(std::map<std::string, int> followers) {
     for (auto const itr : followers) {
         count += itr.second;
         if (count >= i) {
-            return itr.first;
+            // Cut in Section
+//            if (itr.first.size() == 4) {
+//                randomFollower = itr.first + ">";
+//            } else {
+//                randomFollower = itr.first;
+//            }
+            randomFollower = itr.first;
+            return randomFollower;
         }
     }
     return "Error";
@@ -108,21 +116,22 @@ std::string Followers::pick_random(std::map<std::string, int> followers) {
 void Followers::print_followers() {
     std::cout << "Printing Followers:" << std::endl;
     long count = 0;
-    for (auto const itr1 : mFollowers) {
-        for (auto const itr2 : itr1.second) {
+    std::vector<std::string> theWords = {"the"};
+//    for (auto const itr1 : mFollowers) {
+    for (auto const itr2 : mFollowers[theWords]) {// itr1.first) {
             count += itr2.second;
         }
         if (count < 1) {
             std::cout << std::endl << "Count was ZERO!!!!" << std::endl << std::endl;
         }
-        for (auto const itr2 : itr1.first) {
-            std::cout << itr2 << " ";
-        }
-        std::cout << count << " :: " << std::endl;
-        for (auto const itr2 : itr1.second) {
+//    for (auto const itr2 : mFollowers[theWords]) {// itr1.first) {
+//            std::cout << itr2.first << " ";
+//        }
+        std::cout << "the " << count << " :: " << std::endl;
+    for (auto const itr2 : mFollowers[theWords]) {//itr1.second) {
             std::cout << itr2.first << " : ";
             std::cout << itr2.second << " " << std::endl;
         }
         count = 0;
-    }
+//    }
 }
