@@ -41,16 +41,15 @@ void Triangle::setP3(Point p)
 void Triangle::draw()
 {
     glColor3d(mColor[0], mColor[1], mColor[2]);
-    glBegin(GL_TRIANGLES);
+    if (mOutline) {
+        glBegin(GL_LINE_LOOP);
+    } else {
+        glBegin(GL_TRIANGLES);
+    }
     glVertex2d(mP1.getX(), mP1.getY());
     glVertex2d(mP2.getX(), mP2.getY());
     glVertex2d(mP3.getX(), mP3.getY());
     glEnd();
-}
-
-void Triangle::setColor(std::vector<double> color)
-{
-    mColor = color;
 }
 
 void Triangle::save(std::ostream &os)
@@ -60,7 +59,7 @@ void Triangle::save(std::ostream &os)
     r = (int)(mColor[0] / scale) * scale;
     g = (int)(mColor[1] / scale) * scale;
     b = (int)(mColor[2] / scale) * scale;
-    os << "Triangle " << mP1 << mP2 << mP3 << r << " " << g << " " << b << std::endl;
+    os << "Triangle " << mP1 << mP2 << mP3 << mOutline << " " << r << " " << g << " " << b << std::endl;
 }
 
 void Triangle::load(std::istream &is)
@@ -68,9 +67,10 @@ void Triangle::load(std::istream &is)
     Point p1;
     Point p2;
     Point p3;
+    bool outline;
     std::vector<double> color;
     double r, g, b;
-    is >> p1 >> p2 >> p3 >> r >> g >> b;
+    is >> p1 >> p2 >> p3 >> outline >> r >> g >> b;
     color.push_back(r);
     color.push_back(g);
     color.push_back(b);
@@ -78,6 +78,7 @@ void Triangle::load(std::istream &is)
     setP2(p2);
     setP3(p3);
     setColor(color);
+    setOutline(outline);
 }
 
 Point Triangle::getP1()

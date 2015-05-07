@@ -1,0 +1,61 @@
+//
+//  Tile.cpp
+//  UltimateTicTacToe
+//
+//  Created by Kaden Wilkinson on 4/7/15.
+//
+//
+
+#include "Tile.h"
+
+
+Tile::Tile(double x, double y, double size)
+:   Square(x, y, size), mOccupiedBy(-1)
+{
+    
+}
+
+Tile::Tile(Square square)
+:   Tile(square.getLeft(), square.getBottom(), square.getSize())
+{
+    
+}
+
+void Tile::draw(int claimPlayer)
+{
+    if (mOccupiedBy >= 0) {
+        char letter = mOccupiedBy == 0 ? 'O': 'X';
+        void *font = GLUT_BITMAP_HELVETICA_18;
+        if (claimPlayer < 0) {
+            glColor3d(0, mOccupiedBy, !mOccupiedBy);
+        } else {
+            glColor3d(0, claimPlayer, !claimPlayer);
+        }
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_BLEND);
+        
+        int offset = (mSize - 12) / 2;
+        glRasterPos2d(mLeft + offset, mBottom + offset);
+
+        glutBitmapCharacter(font, letter);
+        
+        glDisable(GL_BLEND);
+    }
+    
+}
+
+bool Tile::click(double x, double y, int currentPlayer)
+{
+    if (mOccupiedBy < 0 && Square::contains(x, y)) {
+        mOccupiedBy = currentPlayer;
+        return true;
+    }
+    return false;
+}
+
+int Tile::getOccupiedBy() const
+{
+    return this->mOccupiedBy;
+}
+
+

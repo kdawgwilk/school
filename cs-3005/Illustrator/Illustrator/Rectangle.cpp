@@ -35,17 +35,16 @@ void Rectangle::setP2(Point p)
 void Rectangle::draw()
 {
     glColor3d(mColor[0], mColor[1], mColor[2]);
-    glBegin(GL_QUADS);
+    if (mOutline) {
+        glBegin(GL_LINE_LOOP);
+    } else {
+        glBegin(GL_QUADS);
+    }
     glVertex2d(mP1.getX(), mP1.getY());
     glVertex2d(mP2.getX(), mP1.getY());
     glVertex2d(mP2.getX(), mP2.getY());
     glVertex2d(mP1.getX(), mP2.getY());
     glEnd();
-}
-
-void Rectangle::setColor(std::vector<double> color)
-{
-    mColor = color;
 }
 
 void Rectangle::save(std::ostream &os)
@@ -55,23 +54,24 @@ void Rectangle::save(std::ostream &os)
     r = (int)(mColor[0] / scale) * scale;
     g = (int)(mColor[1] / scale) * scale;
     b = (int)(mColor[2] / scale) * scale;
-    os << "Rectangle " << mP1 << mP2 << r << " " << g << " " << b << std::endl;
+    os << "Rectangle " << mP1 << mP2 << mOutline << " " << r << " " << g << " " << b << std::endl;
 }
 
 void Rectangle::load(std::istream &is)
 {
     Point p1;
     Point p2;
+    bool outline;
     std::vector<double> color;
     double r, g, b;
-    is >> p1 >> p2 >> r >> g >> b;
+    is >> p1 >> p2 >> outline >> r >> g >> b;
     color.push_back(r);
     color.push_back(g);
     color.push_back(b);
     setP1(p1);
     setP2(p2);
     setColor(color);
-
+    setOutline(outline);
 }
 
 Point Rectangle::getP1()

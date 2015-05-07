@@ -47,7 +47,11 @@ void Circle::setRadius(double r)
 void Circle::draw()
 {
     glColor3d(mColor[0], mColor[1], mColor[2]);
-    glBegin(GL_POLYGON);
+    if (mOutline) {
+        glBegin(GL_LINE_LOOP);
+    } else {
+        glBegin(GL_POLYGON);
+    }
     for(int i = 0; i < 32; i++) {
         double theta = (double)i/32.0 * 2.0 * 3.1415926;
         double x = mCenter.getX() + mRadius * cos(theta);
@@ -57,11 +61,6 @@ void Circle::draw()
     glEnd();
 }
 
-void Circle::setColor(std::vector<double> color)
-{
-    mColor = color;
-}
-
 void Circle::save(std::ostream &os)
 {
     double r, g, b;
@@ -69,22 +68,24 @@ void Circle::save(std::ostream &os)
     r = (int)(mColor[0] / scale) * scale;
     g = (int)(mColor[1] / scale) * scale;
     b = (int)(mColor[2] / scale) * scale;
-    os << "Circle " << mCenter << int(mRadius) << " " << r << " " << g << " " << b << std::endl;
+    os << "Circle " << mCenter << int(mRadius) << " " << mOutline << " " << r << " " << g << " " << b << std::endl;
 }
 
 void Circle::load(std::istream &is)
 {
     Point center;
     double radius;
+    bool outline;
     std::vector<double> color;
     double r, g, b;
-    is >> center >> radius >> r >> g >> b;
+    is >> center >> radius >> outline >> r >> g >> b;
     color.push_back(r);
     color.push_back(g);
     color.push_back(b);
     setCenter(center);
     setRadius(radius);
     setColor(color);
+    setOutline(outline);
 }
 
 Point Circle::getCenter()

@@ -9,6 +9,22 @@
 #ifndef __Ultimate_Tic_Tac_Toe__Symbol__
 #define __Ultimate_Tic_Tac_Toe__Symbol__
 
-#include <stdio.h>
+
+
+
+class Symbol {
+public:
+    
+    Symbol();
+    
+protected:
+    
+    
+    
+private:
+    
+    
+};
+
 
 #endif /* defined(__Ultimate_Tic_Tac_Toe__Symbol__) */

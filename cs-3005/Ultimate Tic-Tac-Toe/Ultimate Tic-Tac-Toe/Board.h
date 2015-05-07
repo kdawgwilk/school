@@ -9,6 +9,22 @@
 #ifndef __Ultimate_Tic_Tac_Toe__Board__
 #define __Ultimate_Tic_Tac_Toe__Board__
 
-#include <stdio.h>
+
+
+
+class Board {
+public:
+    
+    Board();
+    
+protected:
+    
+    
+    
+private:
+    
+    
+};
+
 
 #endif /* defined(__Ultimate_Tic_Tac_Toe__Board__) */

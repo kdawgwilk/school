@@ -16,6 +16,7 @@
 
 // Global Variables (Only what you need!)
 int MODE = 3;
+bool OUTLINE = false;
 double SCREEN_X = 700;
 double SCREEN_Y = 500;
 std::vector<Point> POINTS;
@@ -141,6 +142,10 @@ void createButtons()
     BUTTONS.push_back(new Button(Point(10, 280), "Undo", 10, defaultColor));
     BUTTONS.push_back(new Button(Point(10, 310), "Load", 11, defaultColor));
     BUTTONS.push_back(new Button(Point(10, 340), "Save", 12, defaultColor));
+    BUTTONS.push_back(new Button(Point(10, 370), "Outline", 13, defaultColor));
+    BUTTONS.push_back(new Button(Point(10, 400), "Fill", 14, defaultColor));
+    
+    
 }
 
 void createSliders()
@@ -178,10 +183,6 @@ void handleButtonClick(int x, int y, Button *btn)
     }
     if (btn->getID() >= 3 && btn->getID() <= 5) {
         MODE = btn->getID();
-        for (auto itr : BUTTONS) {
-            itr->setActive(false);
-        }
-        btn->setActive(true);
     }
     if (btn->getID() == 9) {
         redo();
@@ -195,6 +196,22 @@ void handleButtonClick(int x, int y, Button *btn)
     if (btn->getID() == 12) {
         save();
     }
+    if (btn->getID() == 13) {
+        OUTLINE = true;
+    }
+    if (btn->getID() == 14) {
+        OUTLINE = false;
+    }
+    for (auto itr : BUTTONS) {
+        itr->setActive(false);
+    }
+    if (OUTLINE) {
+        BUTTONS[9]->setActive(true);
+    } else {
+        BUTTONS[10]->setActive(true);
+    }
+    BUTTONS[MODE - 1]->setActive(true);
+    
 }
 
 void handleSliderClick(int x, int y, Slider *slider)
@@ -217,15 +234,27 @@ void handleOtherClick(int x, int y)
 {
     POINTS.push_back(Point(x, y));
     if (MODE == 3 && POINTS.size() == 2) {
-        SHAPES.push_back(new Circle(POINTS[0], POINTS[1], COLOR));
+        Circle *c = new Circle(POINTS[0], POINTS[1], COLOR);
+        if (OUTLINE) {
+            c->setOutline(true);
+        }
+        SHAPES.push_back(c);
         POINTS.clear();
     }
     if (MODE == 4 && POINTS.size() == 2) {
-        SHAPES.push_back(new Rectangle(POINTS[0], POINTS[1], COLOR));
+        Rectangle *r = new Rectangle(POINTS[0], POINTS[1], COLOR);
+        if (OUTLINE) {
+            r->setOutline(true);
+        }
+        SHAPES.push_back(r);
         POINTS.clear();
     }
     if (MODE == 5 && POINTS.size() == 3) {
-        SHAPES.push_back(new Triangle(POINTS[0], POINTS[1], POINTS[2], COLOR));
+        Triangle *t = new Triangle(POINTS[0], POINTS[1], POINTS[2], COLOR);
+        if (OUTLINE) {
+            t->setOutline(true);
+        }
+        SHAPES.push_back(t);
         POINTS.clear();
     }
 }
@@ -358,6 +387,7 @@ void initMyStuff()
 //    COLOR->push_back(0)
     createButtons();
     BUTTONS[2]->setActive(true);
+    BUTTONS[10]->setActive(true);
     createSliders();
 }
 

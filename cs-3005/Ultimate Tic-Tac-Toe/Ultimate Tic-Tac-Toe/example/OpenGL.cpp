@@ -1,79 +1,39 @@
-// OpenGL/GLUT starter kit for Windows 7 and Visual Studio 2010
-// Created spring, 2011
 //
-// This is a starting point for OpenGl applications.
-// Add code to the "display" function below, or otherwise
-// modify this file to get your desired results.
+//  OpenGL.cpp
+//  UltimateTicTacToe
 //
-// For the first assignment, add this file to an empty Windows Console project
-//		and then compile and run it as is.
-// NOTE: You should also have glut.h,
-// glut32.dll, and glut32.lib in the directory of your project.
-// OR, see GlutDirectories.txt for a better place to put them.
+//  Created by Kaden Wilkinson on 4/7/15.
+//
+//
 
+#include "OpenGL.h"
 
-#include "Headers.h"
-#include "Grid.h"
-#include "Square.h"
 
 // Global Variables (Only what you need!)
-double SCREEN_X = 700;
+double SCREEN_X = 500;
 double SCREEN_Y = 500;
-Grid *GRID = 0;
-double GRID_THICKNESS = 5;
-int GRID_SIZE = 3;
-int TURN = 0;
+Game GAME(0, 0, 500);
 
 
 void undo()
 {
     
 }
-
 void redo()
 {
     
 }
-
 void save()
 {
     
 }
-
 void load()
 {
     
 }
-
 void clear()
 {
     
-}
-
-void drawBoard()
-{
-    GRID->draw();
-}
-
-void playerTurn(int x, int y)
-{
-    
-}
-
-void checkWin()
-{
-    
-}
-
-void createBoard()
-{
-    Point p1 = Point(0, SCREEN_Y);
-    Point p2 = Point(SCREEN_X, 0);
-    Square square = Square(p1, p2);
-    GRID = new Grid(GRID_SIZE, square);
-    if (!GRID) {
-        std::cout << "Grid not initialized!" << std::endl;
-    }
 }
 
 // Outputs a string of text at the specified location.
@@ -87,8 +47,7 @@ void drawText(double x, double y, const char *string)
     int len, i;
     glRasterPos2d(x, y);
     len = (int) strlen(string);
-    for (i = 0; i < len; i++)
-    {
+    for (i = 0; i < len; i++) {
         glutBitmapCharacter(font, string[i]);
     }
     
@@ -106,12 +65,7 @@ void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Test lines that draw all three shapes and some text.
-    // Delete these when you get your code working.
-    drawBoard();
-    
-    glColor3d(1, 1, 1);
-    drawText(200, 10, "CS-3005 - Ultimate Tic-Tac-Toe");
+    GAME.draw();
     
     glutSwapBuffers();
 }
@@ -121,8 +75,7 @@ void display(void)
 // system whenever a key is pressed.
 void keyboard(unsigned char c, int x, int y)
 {
-    switch (c)
-    {
+    switch (c) {
         case 'q':
         case 27: // escape character means to quit the program
             exit(0);
@@ -172,8 +125,6 @@ void reshape(int w, int h)
     gluOrtho2D(0, w, 0, h);
     glMatrixMode(GL_MODELVIEW);
     
-    GRID->resize(w, h);
-    
 }
 
 // This callback function gets called by the Glut
@@ -182,20 +133,20 @@ void mouse(int mouse_button, int state, int x, int y_inverted)
 {
     // translate pixel coordinates to display coordinates
     int y = SCREEN_Y - y_inverted;
+    if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+        if (GAME.click(x, y)) {
+            glutPostRedisplay();
+        }
+        
+    }
+    if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_UP) {
     
-    if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
-    {
-        playerTurn(x, y);
-        checkWin();
     }
-    if (mouse_button == GLUT_LEFT_BUTTON && state == GLUT_UP)
-    {
+    if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) {
+        
     }
-    if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN)
-    {
-    }
-    if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_UP)
-    {
+    if (mouse_button == GLUT_MIDDLE_BUTTON && state == GLUT_UP) {
+        
     }
     glutPostRedisplay();
 }
@@ -203,7 +154,7 @@ void mouse(int mouse_button, int state, int x, int y_inverted)
 // Your initialization code goes here.
 void initMyStuff()
 {
-    createBoard();
+    
 }
 
 
@@ -213,17 +164,14 @@ int main(int argc, char **argv)
     
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(SCREEN_X, SCREEN_Y);
-    glutInitWindowPosition(50, 50);
+    glutInitWindowPosition(450, 250);
     
     int fullscreen = 0;
-    if (fullscreen)
-    {
+    if (fullscreen) {
         glutGameModeString("800x600:32");
         glutEnterGameMode();
-    }
-    else
-    {
-        glutCreateWindow("CS-3005 - Ultimate Tic-Tac-Toe");
+    } else {
+        glutCreateWindow("This appears in the title bar");
     }
     
     glutDisplayFunc(display);
@@ -231,8 +179,8 @@ int main(int argc, char **argv)
     glutReshapeFunc(reshape);
     glutMouseFunc(mouse);
     
-    glColor3d(0,0,0); // forground color
-    glClearColor(0, 0, 0, 0); // background color
+    
+    glClearColor(.8, .8, .8, 0); // background color
     initMyStuff();
     
     glutMainLoop();

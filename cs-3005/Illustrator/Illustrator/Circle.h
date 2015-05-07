@@ -25,7 +25,6 @@ public:
     void setRadius(double r);
     
     virtual void draw();
-    virtual void setColor(std::vector<double> color);
     virtual void save(std::ostream &os);
     virtual void load(std::istream &is);
     

@@ -9,20 +9,9 @@
 #ifndef MacGraphicsStarter_graphics1_h
 #define MacGraphicsStarter_graphics1_h
 
-#include <iostream>
-#include <cmath>
-#include <cstring>
-#include <cstdlib>
-
-#ifdef _WIN32
-#include "glut.h"
-#else
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#else
-#include <GL/glut.h>
-#endif
-#endif
+#include "Headers.h"
+#include "Grid.h"
+#include "Square.h"
 
 
 void undo();
@@ -33,6 +22,8 @@ void clear();
 
 void createBoard();
 
+void playerTurn(int x, int y);
+void checkWin();
 void drawBoard();
 void drawText(double x, double y, const char *string);
 

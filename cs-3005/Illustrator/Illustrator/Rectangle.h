@@ -23,7 +23,6 @@ public:
     void setP2(Point p);
     
     virtual void draw();
-    virtual void setColor(std::vector<double> color);
     virtual void save(std::ostream &os);
     virtual void load(std::istream &is);
     

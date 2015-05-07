@@ -46,11 +46,6 @@ void Point::draw()
     glEnd();
 }
 
-void Point::setColor(std::vector<double> color)
-{
-    mColor = color;
-}
-
 void Point::save(std::ostream &os)
 {
 
