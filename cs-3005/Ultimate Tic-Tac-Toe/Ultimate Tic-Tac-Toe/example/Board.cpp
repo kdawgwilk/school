@@ -48,11 +48,11 @@ void Board::draw(bool colorsToSkip) const
 //                glClearColor(.5, .5, .5, 0); // background color
                 break;
             default:
-                glColor3d(1, colorsToSkip, 1); // forground color
+                glColor3d(1, colorsToSkip, 0); // forground color
                 break;
         }
     } else if(!colorsToSkip) {
-        glColor3d(0, 0, 0); // forground color
+        glColor3d(.5, .5, .5); // forground color
     }
     Grid::draw();
     for (auto itr : mTiles) {

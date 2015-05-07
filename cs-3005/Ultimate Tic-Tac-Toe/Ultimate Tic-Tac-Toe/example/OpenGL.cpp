@@ -10,9 +10,9 @@
 
 
 // Global Variables (Only what you need!)
-double SCREEN_X = 500;
-double SCREEN_Y = 500;
-Game GAME(0, 0, 500);
+double SCREEN_X = 700;
+double SCREEN_Y = 700;
+Game GAME(0, 0, SCREEN_Y);
 
 
 void undo()

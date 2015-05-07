@@ -27,9 +27,15 @@ void Tile::draw(int claimPlayer)
         char letter = mOccupiedBy == 0 ? 'O': 'X';
         void *font = GLUT_BITMAP_HELVETICA_18;
         if (claimPlayer < 0) {
-            glColor3d(0, mOccupiedBy, !mOccupiedBy);
+//            glColor3d(0, mOccupiedBy, !mOccupiedBy);
+            if (mOccupiedBy) {
+                glColor3d(0, .5, 0); // Player X
+            } else {
+                glColor3d(0, 0, .8); // Player O
+            }
         } else {
             glColor3d(0, claimPlayer, !claimPlayer);
+//            glColor3d(0, , 0);
         }
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glEnable(GL_BLEND);
