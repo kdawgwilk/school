@@ -113,13 +113,13 @@
 				A1F0245E1ABA739200BF2FB3 /* 1_student_list_tests.cpp */,
 				A145DE5B1AFA715D00985404 /* 2_int_list_tests.cpp */,
 				A145DE5C1AFA715D00985404 /* 2_student_list_tests.cpp */,
+				A145DE621AFA721700985404 /* 3_student_list_tests.cpp */,
 				A145DE5F1AFA721700985404 /* 3_DeleteNames-CS3005.txt */,
 				A145DE601AFA721700985404 /* 3_InsertNames-CS3005.txt */,
 				A145DE611AFA721700985404 /* 3_RetrieveNames-CS3005.txt */,
-				A145DE621AFA721700985404 /* 3_student_list_tests.cpp */,
+				A145DE661AFA734C00985404 /* 4_int_list_tests.cpp */,
 				A145DE641AFA734C00985404 /* 4_DeleteNums-CS3005.txt */,
 				A145DE651AFA734C00985404 /* 4_InsertNums-CS3005.txt */,
-				A145DE661AFA734C00985404 /* 4_int_list_tests.cpp */,
 				A145DE671AFA734C00985404 /* 4_RetrieveNums-CS3005.txt */,
 			);
 			path = tests;
@@ -278,6 +278,7 @@
 		A1F024501ABA72EA00BF2FB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Sources/school/cs-3005",
@@ -289,6 +290,7 @@
 		A1F024511ABA72EA00BF2FB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Sources/school/cs-3005",

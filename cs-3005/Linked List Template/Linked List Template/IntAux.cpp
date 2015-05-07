@@ -6,6 +6,8 @@ int ReadIntFile(const std::string &filename, LinkedList<int> &nums)
 {
     int c = -1;
     std::ifstream fin(filename);
+    std::cerr << "Error: " << strerror(errno) << std::endl;
+
     bool exists;
     
     if(!fin)
@@ -35,6 +37,7 @@ int RemoveInts(const std::string &filename, LinkedList<int> &nums)
 {
     int c = -1;
     std::ifstream fin(filename);
+    std::cerr << "Error: " << strerror(errno) << std::endl;
     bool exists;
     
     if(!fin)
@@ -64,7 +67,7 @@ double AverageValue(const std::string &filename, LinkedList<int> &nums)
     double c = 0;
     double total = 0;
     std::ifstream fin(filename);
-    
+    std::cerr << "Error: " << strerror(errno) << std::endl;
     if(!fin)
     {
         std::cerr << "Could not open " << filename << std::endl;

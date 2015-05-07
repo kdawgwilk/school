@@ -5,6 +5,9 @@
 
 #include "LinkedList.h"
 #include <vector>
+#include <string>
+#include <cstring>
+#include <sstream>
 #include <iostream>
 #include <fstream>
 
