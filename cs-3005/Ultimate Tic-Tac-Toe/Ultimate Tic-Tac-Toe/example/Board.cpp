@@ -20,8 +20,8 @@ Board::Board(double x, double y, double size)
     for (auto itr : locations) {
         tilePtr = new Tile(*itr);
         mTiles.push_back(tilePtr);
+        delete itr;
     }
-    Square::destroy(locations);
 }
 
 Board::Board(Square square)

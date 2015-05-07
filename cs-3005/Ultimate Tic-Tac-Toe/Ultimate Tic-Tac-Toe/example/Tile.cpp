@@ -34,8 +34,7 @@ void Tile::draw(int claimPlayer)
                 glColor3d(0, 0, .8); // Player O
             }
         } else {
-            glColor3d(0, claimPlayer, !claimPlayer);
-//            glColor3d(0, , 0);
+            glColor3d(0, claimPlayer, !claimPlayer); // Grid color after it has been won by player
         }
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glEnable(GL_BLEND);

@@ -14,18 +14,18 @@ Game::Game(double x, double y, double size)
     mActive(true),
     mCurrentPlayer(0)
 {
-    std::vector<Square *> locations = Game::getLocations();
-    Board * boardPtr;
+    std::vector<Square *> locations = getLocations();
+    Board *board;
     for (auto itr : locations) {
-        boardPtr = new Board(*itr);
-        boardPtr->adjust(1, 1, -2);
-        mBoards.push_back(boardPtr);
+        board = new Board(*itr);
+        board->adjust(1, 1, -2);
+        mBoards.push_back(board);
+        delete itr;
     }
-    Square::destroy(locations);
 }
 
-Game::Game(Square squareIn)
-: Game(squareIn.getLeft(), squareIn.getBottom(), squareIn.getSize())
+Game::Game(Square square)
+: Game(square.getLeft(), square.getBottom(), square.getSize())
 {
     
 }
@@ -42,12 +42,12 @@ void Game::draw() const
 {
     if (mActive) {
         std::string title = "Player ";
-        title += mCurrentPlayer == 0 ? 'O': 'X';
+        title += mCurrentPlayer == 0 ? "O": "X";
         title += "'s turn";
         glutSetWindowTitle(title.c_str());
     } else if(mCurrentPlayer >= 0) {
         std::string title = "Player ";
-        title += mCurrentPlayer == 0 ? 'O': 'X';
+        title += mCurrentPlayer == 0 ? "O": "X";
         title += " Won!";
         glutSetWindowTitle(title.c_str());
     } else {

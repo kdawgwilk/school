@@ -33,12 +33,12 @@ public:
     double getLeft() const;
     double getBottom() const;
     double getSize() const;
-    void destroy(std::vector<Square *> squares) const;
     
 protected:
     double mLeft;
     double mBottom;
     double mSize;
+    int mBoardSize;
 };
 
 #endif /* defined(__UltimateTicTacToe__Square__) */

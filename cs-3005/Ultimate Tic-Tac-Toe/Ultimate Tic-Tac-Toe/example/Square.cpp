@@ -8,14 +8,14 @@
 
 #include "Square.h"
 
-Square::Square(double xIn, double yIn, double sizeIn)
-:   mLeft(xIn),
-    mBottom(yIn),
-    mSize(sizeIn)
+Square::Square(double x, double y, double size)
+:   mLeft(x),
+    mBottom(y),
+    mSize(size),
+    mBoardSize(4)
 {
     
 }
-
 
 void Square::draw() const
 {
@@ -40,12 +40,6 @@ void Square::adjust(double dx, double dy, double dsize)
     mSize += dsize;
 }
 
-void Square::destroy(std::vector<Square *> squares) const
-{
-    for (auto itr : squares) {
-        delete itr;
-    }
-}
 double Square::getLeft() const
 {
     return mLeft;

@@ -20,7 +20,7 @@ public:
     void draw() const;
     
 protected:
-    int mWinningCombos[8][3];
+    int mWinningCombos[20][9];
 };
 
 #endif /* defined(__UltimateTicTacToe__Grid__) */
