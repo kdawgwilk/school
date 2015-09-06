@@ -51,7 +51,7 @@ writeHeader:
 
                 ; Call itoa # r12 += itoa(tmpbuffer, xsize)
                 mov rdi, tmpbuffer
-                mov rsi, [r14]
+                mov rsi, r14
                 call itoa
                 ; buffer += tmpbuffer
                 ; add [r13 + r12], tmpbuffer
@@ -65,7 +65,7 @@ writeHeader:
 
                 ; Call itoa # r12 += itoa(tmpbuffer, ysize)
                 mov rdi, r13
-                mov rsi, [r15]
+                mov rsi, r15
                 call itoa
                 ; buffer += tmpbuffer
                 ; mov [r13 + r12], tmpbuffer
