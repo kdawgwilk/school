@@ -92,12 +92,8 @@ writeHeader:
                 mov [r13 + r12], al
                 inc r12
 
-                ; write(stdout, buffer, len)
-                mov rdi, stdout
-                mov rsi, r13
-                mov rdx, r12
-                mov rax, sys_write
-                syscall
+                ; return buffer length
+                mov rax, r12
 
                 ; pop old values off the stack
                 pop r15

@@ -17,10 +17,11 @@ buffer:        resb 100
 
 section .text
 _start:
-               ; Call itoa # r8 = itoa(buffer, n)
+               ; Call writeHeader # r8 = itoa(buffer, xsize, ysize)
                mov rdi, buffer
-               mov rsi, [n]
-               call itoa
+               mov rsi, [xsize]
+               mov rdx, [ysize]
+               call writeHeader
                mov r8, rax
 
                ; append a newline
