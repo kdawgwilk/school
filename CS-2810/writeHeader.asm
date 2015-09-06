@@ -29,7 +29,7 @@ writeHeader:
                 push r13
                 push r14
                 push r15
-                
+
                 ; move parameters to safe registers
                 mov r12, 0   ; total buffer length
                 mov r13, rdi ; buffer
@@ -54,7 +54,7 @@ writeHeader:
                 mov rsi, [r14]
                 call itoa
                 ; buffer += tmpbuffer
-                mov [r13 + r12], tmpbuffer 
+                ; add [r13 + r12], tmpbuffer
                 ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
@@ -68,7 +68,7 @@ writeHeader:
                 mov rsi, [r15]
                 call itoa
                 ; buffer += tmpbuffer
-                mov [r13 + r12], tmpbuffer
+                ; mov [r13 + r12], tmpbuffer
                 ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
@@ -83,7 +83,7 @@ writeHeader:
                 mov rsi, [colormax]
                 call itoa
                 ; buffer += tmpbuffer
-                mov [r13 + r12], tmpbuffer
+                ; mov [r13 + r12], tmpbuffer
                 ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
@@ -104,18 +104,4 @@ writeHeader:
                 pop r14
                 pop r13
                 pop r12
-
-                ; exit(bytes)
-                ; mov rdi, r8 ; still ok after syscall
-                ; mov rax, sys_exit
-                ; syscall
-
-                ; gdb a.out (debugger)
-
-                ;run (to run debugger)
-                ;print $r8 (gives value in register)
-                ;x 9 (examine address)
-                ;b _start (breakpoint at _start)
-                ;run steps through
-                ;l ()
 
