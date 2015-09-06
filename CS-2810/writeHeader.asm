@@ -64,7 +64,7 @@ writeHeader:
                 inc r12
 
                 ; Call itoa # r12 += itoa(tmpbuffer, ysize)
-                mov rdi, r13
+                mov rdi, tmpbuffer
                 mov rsi, r15
                 call itoa
                 ; buffer += tmpbuffer
@@ -79,7 +79,7 @@ writeHeader:
 
                 ; Hard Code 255
                 ; Call itoa # r12 += itoa(tmpbuffer, colormax)
-                mov rdi, r13
+                mov rdi, tmpbuffer
                 mov rsi, [colormax]
                 call itoa
                 ; buffer += tmpbuffer
