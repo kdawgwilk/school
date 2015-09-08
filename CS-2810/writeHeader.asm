@@ -30,7 +30,7 @@ writeHeader:
                 ; move parameters to safe registers
                 mov r12, 0   ; total buffer length
                 mov r13, rdi ; buffer
-                mov r14, rsi ; xsize
+                mov r14, rsi ; xsize # not necesary because we don't need it after call to itoa
                 mov r15, rdx ; ysize
 
                 ; Hard Code P3
@@ -46,8 +46,8 @@ writeHeader:
                 mov [r13 + r12], al
                 inc r12
 
-                ; Call itoa # r12 += itoa(buffer + length, xsize)
-                mov rdi, [r13 + r12]
+                ; Call itoa # r12 += itoa(buffer + length, xsize) X
+                lea rdi, [r13 + r12]
                 mov rsi, r14
                 call itoa
                 add r12, rax
@@ -57,8 +57,8 @@ writeHeader:
                 mov [r13 + r12], al
                 inc r12
 
-                ; Call itoa # r12 += itoa(buffer + length, ysize)
-                mov rdi, [r13 + r12]
+                ; Call itoa # r12 += itoa(buffer + length, ysize) Y
+                lea rdi, [r13 + r12]
                 mov rsi, r15
                 call itoa
                 add r12, rax
@@ -70,8 +70,8 @@ writeHeader:
 
                 ; Hard Code 255
                 ; Call itoa # r12 += itoa(buffer + length, colormax)
-                mov rdi, [r13 + r12]
-                mov rsi, [colormax]
+                lea rdi, [r13 + r12]
+                mov rsi, colormax
                 call itoa
                 add r12, rax
 
