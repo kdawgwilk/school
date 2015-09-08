@@ -37,28 +37,33 @@ def bubble_sort(array):
 
 
 def shaker_sort(array):
+    # start = 0
+    # stop = len(A) - 1
     length = len(array) - 1
     flag = True
     while flag:
         flag = False
-        for i in range(length):
+        for i in range(length): # (start, stop)
             if array[i] > array[i + 1]:
                 array[i], array[i + 1] = array[i + 1], array[i]
                 flag = True
         if not flag:
             break
-        for i in range(length - 1, -1, -1):
+        # stop -= 1
+        # flag = False
+        for i in range(length - 1, -1, -1): # (stop, start - 1, -1)
             if array[i] > array[i + 1]:
                 array[i], array[i + 1] = array[i + 1], array[i]
                 flag = True
         length -= 1
+        # start += 1
 
 
 def selection_sort(array):
     length = len(array)
     for i in range(length):
         smallest_index = i
-        for j in range(i, length):
+        for j in range(i, length): # range(i + 1, length):
             if array[smallest_index] > array[j]:
                 smallest_index = j
         array[i], array[smallest_index] = array[smallest_index], array[i]

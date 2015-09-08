@@ -17,9 +17,6 @@ newline:        equ 10
 section .data
 colormax:       dq 255
 
-section .bss
-tmpbuffer:      resb 100
-
 section .text
 
 ; writeHeader(buffer, x, y) -> # bytes written
@@ -49,13 +46,10 @@ writeHeader:
                 mov [r13 + r12], al
                 inc r12
 
-                ; Call itoa # r12 += itoa(tmpbuffer, xsize)
-                mov rdi, tmpbuffer
+                ; Call itoa # r12 += itoa(buffer + length, xsize)
+                mov rdi, [r13 + r12]
                 mov rsi, r14
                 call itoa
-                ; buffer += tmpbuffer
-                ; add [r13 + r12], tmpbuffer
-                ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
                 ; Add space between xsize, ysize
@@ -63,13 +57,10 @@ writeHeader:
                 mov [r13 + r12], al
                 inc r12
 
-                ; Call itoa # r12 += itoa(tmpbuffer, ysize)
-                mov rdi, tmpbuffer
+                ; Call itoa # r12 += itoa(buffer + length, ysize)
+                mov rdi, [r13 + r12]
                 mov rsi, r15
                 call itoa
-                ; buffer += tmpbuffer
-                ; mov [r13 + r12], tmpbuffer
-                ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
                 ; append a newline
@@ -78,13 +69,10 @@ writeHeader:
                 inc r12
 
                 ; Hard Code 255
-                ; Call itoa # r12 += itoa(tmpbuffer, colormax)
-                mov rdi, tmpbuffer
+                ; Call itoa # r12 += itoa(buffer + length, colormax)
+                mov rdi, [r13 + r12]
                 mov rsi, [colormax]
                 call itoa
-                ; buffer += tmpbuffer
-                ; mov [r13 + r12], tmpbuffer
-                ; total_buffer_size += tmp_buffer_size
                 add r12, rax
 
                 ; append a newline
