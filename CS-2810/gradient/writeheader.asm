@@ -88,6 +88,3 @@ writeHeader:
                 pop r12
 
                 ret
-
-
-
