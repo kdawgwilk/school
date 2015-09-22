@@ -39,6 +39,8 @@ def satisfiable(expression):
     variables = []
 
 
+# def
+
 
 def main():
     A = create_random_list(ARRAY_SIZE)
