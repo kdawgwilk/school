@@ -28,9 +28,7 @@
 # Compares (Unit = log2N)
 # N = 3, 4, 5...12 (Unit = log2N)
 
-import random
 import sys
-import Sorter
 
 ARRAY_SIZE = 100
 DEBUG = True
