@@ -54,6 +54,7 @@ class Sorter:
         return
 
     def print_data(self, i):
+        # x = "%5.2f" % x
         precision = 2
         if i == 0:
             if self.compares > 0:

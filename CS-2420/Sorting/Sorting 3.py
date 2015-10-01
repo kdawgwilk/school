@@ -29,11 +29,7 @@ import math
 # NOTE: Do NOT use global variables!
 # Is this ok?
 DEBUG = False
-sort_types = ["Bubble", "Shaker", "Selection", "Merge", "Quick", "ModQuick", "Hash"]
 
-# for i in range(len(sort_types)):
-#     sort = sort_types[i]
-#     eval("from %s import %s" % (sort, sort))
 from Bubble import Bubble
 from Shaker import Shaker
 from Selection import Selection
@@ -44,9 +40,13 @@ from Hash import Hash
 
 
 def main(debug):
+    # fout = open("data.csv", "wt")
+    # fout.write(str(i) + name + "\n"")
+    # fout.close()
     starting_size = 8
     ending_size = 1024 * 4
     sys.setrecursionlimit(ending_size + 10)
+    sort_types = ["Bubble", "Shaker", "Selection", "Merge", "Quick", "ModQuick", "Hash"]
 
     for i in range(4):
         print("========================================")
