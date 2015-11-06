@@ -1,0 +1,86 @@
+global calcPixel
+extern mandel
+extern getColor
+extern blendColors
+extern subpixelOffsets
+
+section .bss
+buffer:			resb 4096
+
+calcPixel:						; calcPixel(maxiters, column, row, xsize, ysize, xcenter, ycenter, magnification) -> rgb 
+                push r12
+                push r13
+                push r14
+                push r15
+                push rbx
+
+                push rbp					; setup stack frame
+				mov rbp, rsp				; copy stack pointer
+
+                mov r12, rdi 	; r12 = maxiters
+                mov r13, rsi 	; r13 = col
+                mov r14, rdx 	; r14 = row
+                mov rbx, rcx 	; rbx = xsize
+                mov rbp, r8  	; rbp = ysize
+                				; xmm0 = xcenter
+                				; xmm1 = ycenter
+                				; xmm2 = magnification
+                				; xmm3 = minsize
+                				; xmm2 = D
+
+               	; minsize = min(xsize, ysize)
+               	mov r8, rbx  ; minsize = xsize
+               	cmp rcx, r8  ; if xsize <= ysize
+               	jle .continue ; goto continue
+               	mov r8, rbp  ; minsize = ysize
+.continue:
+				; xmm2 = D = (magnification * (minsize - 1))
+				sub r8, 1 ; minsize - 1
+				cvtsi2sd xmm3, r8
+				mulsd xmm2, xmm3
+outer_loop:
+
+
+inner_loop:
+				; rdi = halfxsize = xsize / 2
+				shr rbx, 1 	; rax = xsize / 2
+				; rax = colx = (column - halfxsize)
+				sub r13, rbx		; r8 = r8 - rdi
+				; rsi = halfysize = ysize / 2
+				shr rbp, 1				; ysize / 2
+				sub r14, rbp			; (row - halfysize)
+
+    			; x = xcenter + colx / D
+				cvtsi2sd xmm3, r13
+				divsd xmm3, xmm2
+				addsd xmm0, xmm3
+
+				; y = ycenter - rowy / D
+				cvtsi2sd xmm4, r14
+				divsd xmm4, xmm2
+				subsd xmm1, xmm4
+
+				; mandel(int maxIterations, float x, float y) -> iterations
+				mov rdi, r12
+				call mandel
+
+				; getColor(iters) -> rgb
+				mov rdi, rax
+				call getColor
+end_inner:
+				inc r?							; y_index++
+				jmp .outer_loop					; goto .outer_loop
+end_outer:
+				mov rdi, buffer
+				mov rsi, rbx
+				call blendColors			; rgb_color = blendColors(buffer, total_colors)
+.return:
+				mov rsp, rbp				; reset stack pointer
+                pop rbp						; delete stack frame
+                pop rbx
+                pop r15
+				pop r14
+				pop r13
+				pop r12
+
+				ret

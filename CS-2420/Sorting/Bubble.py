@@ -9,11 +9,13 @@ class Bubble(Sorter):
         return
 
     def sort(self):
+        # print "Array Before: ", self.array
         length = self.size
         flag = True
         while flag:
             flag = False
             for i in range(length - 1):
+
                 self.compares += 1
                 if self.array[i] > self.array[i + 1]:
                     self.array[i], self.array[i + 1] = self.array[i + 1], self.array[i]

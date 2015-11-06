@@ -23,6 +23,8 @@ class Sorter:
         return
 
     def random_list(self):
+        # self.array = [4, 7, 5, 2, 10, 3, 8, 1, 6, 9]
+        # return
         del self.array[:]
         for i in range(self.size):
             random_num = random.randrange(self.size)

@@ -1,0 +1,17 @@
+BLENDCOLORS
+To implement anti-aliasing, you will need to be able to blend multiple colors together, taking the average of each color. Write a function to do this:
+
+blendColors(buffer, count) → RGB
+The buffer parameter is a pointer to a list of RGB color values, and count tells how many there are (you may assume this will always be a positive number). You must return the average of all the color values in the list.
+
+When computing the average, you must consider each color channel (red, green, and blue) independently. You cannot simply take the average of all of the numbers in the list. For example, if you are given these two colors:
+
+0x000100 (darkest possible green, almost black)
+0x000000 (black)
+If you just average these two numerical values, you get 0x000080, which is a medium blue.
+
+Instead, you must average each color channel separately. When you do this, you get 0x000000, which is black.
+
+I suggest the following: keep a running total of all red intensities, green intensities, and blue intensities as you loop through the colors in the list. If you extract each color and track it in a separate register, you do no need to worry about green values “leaking” into the red channel, etc.
+
+Once you have examined all values in the list, divide each total by the number of samples in the list (count), and then recombine the three color channels into a single RGB value.

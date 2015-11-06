@@ -19,6 +19,7 @@ class Merge(Sorter):
         mid = length // 2
         left_half = array[:mid]
         right_half = array[mid:]
+        self.swaps += length
 
         self.sort_recursive(left_half)
         self.sort_recursive(right_half)

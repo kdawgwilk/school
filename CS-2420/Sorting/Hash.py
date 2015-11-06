@@ -9,12 +9,12 @@ class Hash(Sorter):
         return
 
     def sort(self):
-        self.swaps += 1  # Not sure if this is even right
         length = len(self.array)
         frequency_array = [0] * length
         for i in range(length):
+            self.swaps += 1  # Not sure if this is even right
+            self.compares += 1
             frequency_array[self.array[i]] += 1
-
         k = 0
         for i in range(length):
             number = frequency_array[i]

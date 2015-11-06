@@ -4,7 +4,7 @@ from Bubble import Bubble
 from Shaker import Shaker
 from Selection import Selection
 
-SIZE = 1000
+SIZE = 10
 DEBUG = True
 
 
