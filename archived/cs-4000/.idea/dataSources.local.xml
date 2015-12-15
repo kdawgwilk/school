@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Trendly" uuid="4d8a997f-d710-4b33-8dda-539266e43860">
+      <secret-storage>master_key</secret-storage>
+      <user-name>kdawgwilk</user-name>
+      <schema-pattern>trendly.*</schema-pattern>
+      <default-schemas>trendly.*</default-schemas>
+    </data-source>
+  </component>
+</project>
