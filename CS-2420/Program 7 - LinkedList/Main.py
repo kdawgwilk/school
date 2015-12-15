@@ -1,17 +1,18 @@
 # Create a container class for storing unordered unique Students.
 # It should support the methods: Exists, Insert, Traverse, Delete, Retrieve, and Size.
-# Implement the methods using a LinkedList.
-# Repeat the previous assignment using your new LinkedList container class,
+# Implement the methods using a Program 7 - LinkedList.
+# Repeat the previous assignment using your new Program 7 - LinkedList container class,
 # and compare the Insert, Traverse, Delete, and Retrieve times to the pythonList.
 # Verify that the average ages and the error messages are the same.
 # Note that your main function should be much simpler than it was when you used a python list,
-# because your LinkedList class automatically enforces uniqueness.
+# because your Program 7 - LinkedList class automatically enforces uniqueness.
 
 # NOTE: You many want to create smaller versions of the Insert, Delete, and Retrieve lists that have, say,
 # only 10 or 20 items.
 
-from UUC import UUC
 from Student import Student
+
+from Data.UUC import UUC
 
 total_ages = 0
 

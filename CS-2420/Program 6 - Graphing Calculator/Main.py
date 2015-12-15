@@ -107,7 +107,7 @@ def main():
         print y
         points.append((x, y))
         x += inc
-    win = GraphWin("My Graph", 500, 500)
+    win = GraphWin("My Program 11 - Graph", 500, 500)
     win.setCoords(low_x, low_x, high_x, high_x)
     x_axis = Line(Point(low_x, 0), Point(high_x, 0))
     x_axis.draw(win)
