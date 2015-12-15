@@ -1,5 +1,3 @@
-
-
 # Linear Probing
     # index + 0
     # index + 1
@@ -14,9 +12,3 @@
 # separate chaining
     # chain off the original index
 
-def __int__(self):
-    return int(self.ssn.replace('-', ''))
-
-
-def __ne__(self, rhs):
-    return self.ssn != rhs.ssn

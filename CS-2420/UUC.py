@@ -55,8 +55,8 @@ class UUC:
         return self.mCount
 
     def traverse(self, callback):
-        current_item = self.mFirst
-        while current_item:
-            callback(current_item)
-            current_item = current_item.mNext
+        current = self.mFirst
+        while current:
+            callback(current.mItem)
+            current = current.mNext
         return
