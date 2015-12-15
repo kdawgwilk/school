@@ -62,3 +62,63 @@
 # 16. write code for bubble sort
 # 17. write pop code (could be any code from)
 
+
+
+
+
+
+def breadth_first_search(start, to):
+    # mNeighbors = [
+    #   [1, 3]
+    #   [0, 2, 4]
+    #   [1, 4]
+    #   [0, 4]
+    # ]
+    # distance = [-1, -1, 0, -1, -1]
+    from_array = [-1] * len(mNeighbors) # [-1, -1, 2, -1, -1]
+    Q = Queue() # PriorityQueue()
+    Q.enque(start) # Q.enque(start, 0)
+    from_array[start] = start
+    while not Q.empty():
+        c = Q.dequeu
+        if c == to:
+            # build path and return
+        for neighbor in mNeighbors: # for all neighbors of c that we havent already visited:
+            Q.enque(n)
+            from_array[n] = c
+    return None
+
+import bsgraph
+
+def main():
+    fin = open("graphdata.txt")
+    line = fin.readline()
+    num_vertices = int(line)
+    G = bsgraph.bsgraph(num_vertices)
+    num_edges = int(fin.readline())
+    for i in range(num_edges):
+        line = fin.readline() # "0 1\n"
+        words = line.split()
+        fromm = int(words[0])
+        to = int(words[1])
+        G.AddEdge(fromm, to)
+    num_tests = int(fin.readline())
+    for i in range(num_tests):
+        line = fin.readline() # "0 1\n"
+        words = line.split()
+        fromm = int(words[0])
+        to = int(words[1])
+        print "Going from", fromm, "to", to
+        print G.depth_first_search(fromm, to)
+        print G.breadth_first_search(fromm, to)
+
+
+# Final Test Study
+
+
+
+
+
+
+
+
